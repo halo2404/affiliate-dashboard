@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Sale</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ sale.id }}</td>
+            </tr>
+            <tr>
+                <th>Asin</th>
+                <td>{{ sale.asin }}</td>
+            </tr>
+            <tr>
+                <th>Category</th>
+                <td>{{ sale.category }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{% if sale.date %}{{ sale.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Earnings</th>
+                <td>{{ sale.earnings }}</td>
+            </tr>
+            <tr>
+                <th>Linktype</th>
+                <td>{{ sale.linkType }}</td>
+            </tr>
+            <tr>
+                <th>Rate</th>
+                <td>{{ sale.rate }}</td>
+            </tr>
+            <tr>
+                <th>Qty</th>
+                <td>{{ sale.qty }}</td>
+            </tr>
+            <tr>
+                <th>Revenue</th>
+                <td>{{ sale.revenue }}</td>
+            </tr>
+            <tr>
+                <th>Tag</th>
+                <td>{{ sale.tag }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ sale.title }}</td>
+            </tr>
+            <tr>
+                <th>Seller</th>
+                <td>{{ sale.seller }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('sale_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

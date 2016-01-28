@@ -1,0 +1,652 @@
+<?xml version="1.0"?>
+<Data>
+    <Items>
+        <Item ASIN="B000LBA3KK" Binding="accessory" Category="147" Date="January 07, 2016" DeviceType="BROWSER"
+              EDate="1452124800" Earnings="0,05" LinkType="asn" Price="1,69" Qty="1" Rate="2,96" Revenue="1,69"
+              Seller="" Tag="mkleine-21"
+              Title="Mcab Netzwerkkabel Verbinder geschirmt Cat5 RJ45 Buchse auf RJ45 Buchse"/>
+        <Item ASIN="B002CV9BBE" Binding="office_product" Category="229" Date="January 02, 2016"
+              DeviceType="MOBILE_BROWSER" EDate="1451692800" Earnings="1,76" LinkType="as2" Price="12,56" Qty="2"
+              Rate="7,01" Revenue="25,12" Seller="Amazon.de" Tag="mkleine-21"
+              Title="LEUCHTTURM1917 311333 Notizbuch Medium (A5), 249 Seiten, Lineatur: blanko, Farbe: schwarz - weitere Farben und Lineaturen ausw&#228;hlbar"/>
+        <Item ASIN="B003MTTJOY" Binding="pc" Category="147" Date="January 27, 2016" DeviceType="BROWSER"
+              EDate="1453852800" Earnings="0,20" LinkType="as2" Price="6,72" Qty="1" Rate="2,98" Revenue="6,72"
+              Seller="Amazon.de" Tag="klein0rde-21"
+              Title="EDIMAX EW-7811UN Wireless USB Adapter, 150 Mbit/s, IEEE802.11b/g/n"/>
+        <Item ASIN="B004ST49YW" Binding="office_product" Category="229" Date="January 02, 2016"
+              DeviceType="MOBILE_BROWSER" EDate="1451692800" Earnings="0,45" LinkType="as2" Price="2,10" Qty="3"
+              Rate="7,14" Revenue="6,30" Seller="Amazon.de" Tag="mkleine-21"
+              Title="LEUCHTTURM1917 339273 Pen Loop (Stiftschlaufe), selbstklebend, Farbe: limone - weitere Farben ausw&#228;hlbar"/>
+        <Item ASIN="B004SU9FMC" Binding="accessory" Category="23" Date="January 08, 2016" DeviceType="BROWSER"
+              EDate="1452211200" Earnings="0,15" LinkType="asn" Price="5,10" Qty="1" Rate="2,94" Revenue="5,10"
+              Seller="" Tag="mkleine-21"
+              Title="BIGtec 10m CAT.5e Ethernet LAN Patchkabel Gigabit Netzwerkkabel Patch Kabel schwarz (RJ45, Cat 5e, Twisted Pair UTP, 1000 Mbit/s) 2 x RJ45 Stecker ide"/>
+        <Item ASIN="B0054IPASK" Binding="miscellaneous" Category="60" Date="January 13, 2016" DeviceType="BROWSER"
+              EDate="1452643200" Earnings="1,42" LinkType="as2" Price="28,42" Qty="1" Rate="5,00" Revenue="28,42"
+              Seller="" Tag="klein0rde-21" Title="Intertechno Funksteckdosen 3 fach Set IT-1500"/>
+        <Item ASIN="B0055CB7FA" Binding="consumer_electronics" Category="23" Date="January 12, 2016"
+              DeviceType="BROWSER" EDate="1452556800" Earnings="0,50" LinkType="as2" Price="8,40" Qty="2" Rate="2,98"
+              Revenue="16,80" Seller="Amazon.de" Tag="klein0rde-21"
+              Title="Wicked Chili KFZ USB Adapter f&#252;r Samsung Galaxy S6 Edge / S6 / S5 Active / S5 / S5mini / S4 / S4 Active / S4mini / S3 / S3mini / Note PRO/Edge/4/3/2/"/>
+        <Item ASIN="B005IW9Q1E" Binding="office_product" Category="229" Date="January 23, 2016"
+              DeviceType="MOBILE_BROWSER" EDate="1453507200" Earnings="1,10" LinkType="as2" Price="15,76" Qty="1"
+              Rate="6,98" Revenue="15,76" Seller="Amazon.de" Tag="klein0rde-21"
+              Title="Canon PG-540XL Original Tintenpatrone, 21ml schwarz"/>
+        <Item ASIN="B005QIP3BM" Binding="dvd" Category="74" Date="January 07, 2016" DeviceType="BROWSER"
+              EDate="1452124800" Earnings="0,85" LinkType="as2" Price="16,99" Qty="1" Rate="5,00" Revenue="16,99"
+              Seller="" Tag="klein0rde-21" Title="Scream 1 - 3 (Special Edition, 4 Discs, Uncut)"/>
+        <Item ASIN="B006IU5A2E" Binding="game_video" Category="63" Date="January 15, 2016" DeviceType="BROWSER"
+              EDate="1452816000" Earnings="0,20" LinkType="as2" Price="3,99" Qty="1" Rate="5,01" Revenue="3,99"
+              Seller="" Tag="mkleine-21"
+              Title="Silverhill Tools ASDY3 Deluxe Triwing Schraubenzieher f&#252;r Nintendo Produkte"/>
+        <Item ASIN="B008634VJY" Binding="pc" Category="147" Date="January 25, 2016" DeviceType="MOBILE_BROWSER"
+              EDate="1453680000" Earnings="0,77" LinkType="as2" Price="25,61" Qty="1" Rate="3,01" Revenue="25,61"
+              Seller="Amazon.de" Tag="mkleine-21"
+              Title="StarTech.com 1m USB Nullmodem RS232 Adapter Kabel - USB 2.0 auf Seriell DB9 mit FTDI Chipsatz - USB / 9 pol. Buchse"/>
+        <Item ASIN="B008CNVIIU" Binding="camera" Category="0" Date="January 25, 2016" DeviceType="BROWSER"
+              EDate="1453680000" Earnings="0,57" LinkType="sp1" Price="19,00" Qty="1" Rate="3,00" Revenue="19,00"
+              Seller="" Tag="klein0rde-21" Title="Passbild Rollo Grau"/>
+        <Item ASIN="B008KOTNVA" Binding="miscellaneous" Category="60" Date="January 12, 2016" DeviceType="BROWSER"
+              EDate="1452556800" Earnings="1,25" LinkType="as2" Price="24,95" Qty="1" Rate="5,01" Revenue="24,95"
+              Seller="" Tag="klein0rde-21" Title="IFixit 145022 Bit-Set 54tlg. Handy-Reparatur"/>
+        <Item ASIN="B00ACDNP70" Binding="office_product" Category="229" Date="January 02, 2016"
+              DeviceType="MOBILE_BROWSER" EDate="1451692800" Earnings="1,29" LinkType="as2" Price="18,45" Qty="1"
+              Rate="6,99" Revenue="18,45" Seller="Amazon.de" Tag="mkleine-21"
+              Title="Leuchtturm1917 343552 Some Lines a Day - Das F&#252;nfjahresbuch, Medium, A5"/>
+        <Item ASIN="B00BJWP6GQ" Binding="toy" Category="21" Date="January 14, 2016" DeviceType="BROWSER"
+              EDate="1452729600" Earnings="0,78" LinkType="asn" Price="15,54" Qty="1" Rate="5,02" Revenue="15,54"
+              Seller="" Tag="mkleine-21" Title="Supra Weiss 125 ml Schmincke Aero Color 101 26 AKTION"/>
+        <Item ASIN="B00BNSU7FQ" Binding="toy" Category="21" Date="January 14, 2016" DeviceType="BROWSER"
+              EDate="1452729600" Earnings="0,70" LinkType="as2" Price="13,99" Qty="1" Rate="5,00" Revenue="13,99"
+              Seller="" Tag="klein0rde-21" Title="WINGONEER Physik Lehre Pr&#228;zision optisch Glas Prisma 15cm"/>
+        <Item ASIN="B00CFF3410" Binding="tools" Category="60" Date="January 13, 2016" DeviceType="BROWSER"
+              EDate="1452643200" Earnings="1,97" LinkType="as2" Price="39,40" Qty="1" Rate="5,00" Revenue="39,40"
+              Seller="" Tag="klein0rde-21" Title="HomeMatic 105155 Funk-Stellantrieb"/>
+        <Item ASIN="B00CFF3410" Binding="tools" Category="60" Date="January 21, 2016" DeviceType="BROWSER"
+              EDate="1453334400" Earnings="-1,90" LinkType="as2" Price="37,99" Qty="-1" Rate="5,00" Revenue="-37,99"
+              Seller="" Tag="klein0rde-21" Title="HomeMatic 105155 Funk-Stellantrieb" Type="Return"/>
+        <Item ASIN="B00FCZB6YW" Binding="Unknown" Category="60" Date="January 07, 2016" DeviceType="BROWSER"
+              EDate="1452124800" Earnings="5,75" LinkType="as2" Price="114,95" Qty="1" Rate="5,00" Revenue="114,95"
+              Seller="" Tag="klein0rde-21" Title="HomeMatic Funk-Heizk&#246;rperthermostat 3er Set"/>
+        <Item ASIN="B00FNCEGBY" Binding="tools" Category="60" Date="January 14, 2016" DeviceType="BROWSER"
+              EDate="1452729600" Earnings="1,27" LinkType="as2" Price="25,39" Qty="1" Rate="5,00" Revenue="25,39"
+              Seller="Amazon.de" Tag="klein0rde-21" Title="Tristar Elektroheizung &#214;lradiator KA-5103"/>
+        <Item ASIN="B00GM0305Y" Binding="consumer_electronics" Category="23" Date="January 07, 2016"
+              DeviceType="BROWSER" EDate="1452124800" Earnings="0,32" LinkType="as2" Price="10,83" Qty="1" Rate="2,95"
+              Revenue="10,83" Seller="Amazon.de" Tag="mkleine-21"
+              Title="Rydges High-Quality PC Netzteil - by OTB 2A - / 2000 mAh Ladeger&#228;t 5V 2000 mAh f&#252;r Raspberry Pi Modell A und B &amp; Banana Pi - Pi Model B+ (B Plus) un"/>
+        <Item ASIN="B00JTGGJX8" Binding="consumer_electronics" Category="23" Date="January 06, 2016"
+              DeviceType="BROWSER" EDate="1452038400" Earnings="0,22" LinkType="asn" Price="7,49" Qty="1" Rate="2,94"
+              Revenue="7,49" Seller="" Tag="mkleine-21"
+              Title="2,5mm x 0,8mm USB Netzteil Ladekabel Ladeger&#228;t 5V 2A f&#252;r Android Tablet (250cm)"/>
+        <Item ASIN="B00MWXUKDK" Binding="accessory" Category="147" Date="January 27, 2016" DeviceType="BROWSER"
+              EDate="1453852800" Earnings="0,34" LinkType="as2" Price="5,67" Qty="2" Rate="3,00" Revenue="11,34"
+              Seller="Amazon.de" Tag="klein0rde-21"
+              Title="SanDisk Ultra Android 8GB microSDHC UHS-I Class 10 Speicherkarte + SD-Adapter bis zu 48MB/s lesen [Amazon Frustfreie Verpackung]"/>
+        <Item ASIN="B00Q76OM5A" Binding="dvd" Category="74" Date="January 08, 2016" DeviceType="BROWSER"
+              EDate="1452211200" Earnings="0,34" LinkType="asn" Price="6,70" Qty="1" Rate="5,07" Revenue="6,70"
+              Seller="Amazon.de" Tag="mkleine-21" Title="Honig im Kopf"/>
+        <Item ASIN="B00S9AL5WU" Binding="kitchen" Category="201" Date="January 18, 2016" DeviceType="BROWSER"
+              EDate="1453075200" Earnings="0,39" LinkType="as2" Price="5,59" Qty="1" Rate="6,98" Revenue="5,59"
+              Seller="" Tag="mkleine-21"
+              Title="tinxi&#174; Gummif&#252;sse Bottom feet (passend f&#252;r: MacBook Pro A1278 A1286 A1297 13&quot; 15&quot; 17&quot;) - 4 St&#252;ck"/>
+        <Item ASIN="B00SRCC376" Binding="office_product" Category="229" Date="January 18, 2016" DeviceType="BROWSER"
+              EDate="1453075200" Earnings="0,56" LinkType="as2" Price="7,99" Qty="1" Rate="7,01" Revenue="7,99"
+              Seller="" Tag="klein0rde-21" Title="MW Handel Zeugnismappe f&#252;r Kinder DIN A4 FSC, mix blau"/>
+        <Item ASIN="B00T2U7R7I" Binding="pc" Category="147" Date="January 11, 2016" DeviceType="BROWSER"
+              EDate="1452470400" Earnings="0,98" LinkType="as2" Price="32,78" Qty="1" Rate="2,99" Revenue="32,78"
+              Seller="Amazon.de" Tag="klein0rde-21"
+              Title="Raspberry Pi 2 - 900MHz quad-core ARM Cortex-A7 CPU, 1GB LPDDR2 SDRAM, complete compatibility with Raspberry Pi 1"/>
+        <Item ASIN="B00T2U7R7I" Binding="pc" Category="147" Date="January 27, 2016" DeviceType="BROWSER"
+              EDate="1453852800" Earnings="1,19" LinkType="as2" Price="39,79" Qty="1" Rate="2,99" Revenue="39,79"
+              Seller="" Tag="klein0rde-21"
+              Title="Raspberry Pi 2 - 900MHz quad-core ARM Cortex-A7 CPU, 1GB LPDDR2 SDRAM, complete compatibility with Raspberry Pi 1"/>
+        <Item ASIN="B00TJEZ4U4" Binding="consumer_electronics" Category="23" Date="January 08, 2016"
+              DeviceType="BROWSER" EDate="1452211200" Earnings="0,24" LinkType="asn" Price="7,99" Qty="1" Rate="3,00"
+              Revenue="7,99" Seller="" Tag="mkleine-21"
+              Title="AUKEY USB Ladeger&#228;t 5V 2.4A Netzteil Ladeadapter USB Adapter AIPowerTM f&#252;r iphone 6s / iphone 6 / Samsung Galaxy s6 / Google Nexus 6 und andere USB-"/>
+        <Item ASIN="B00UCSO9G6" Binding="consumer_electronics" Category="23" Date="January 27, 2016"
+              DeviceType="BROWSER" EDate="1453852800" Earnings="0,39" LinkType="as2" Price="12,99" Qty="1" Rate="3,00"
+              Revenue="12,99" Seller="" Tag="klein0rde-21"
+              Title="Aukru 3er Set kit Raspberry Pi 2 Geh&#228;use/Case transparent + Netzteil 5V 2000mA Micro usb + K&#252;hlk&#246;rper F&#252;r Raspberry Pi 2 Model B (die neueste Vers"/>
+        <Item ASIN="B00US3KAPE" Binding="video_download" Category="318" Date="January 24, 2016"
+              DeviceType="MOBILE_BROWSER" EDate="1453593600" Earnings="0,60" LinkType="as2" Price="5,99" Qty="1"
+              Rate="10,02" Revenue="5,99" Seller="" Tag="haus-automatisierung-21" Title="Interstellar [dt./OV]"/>
+        <Item ASIN="B00W7S1BFG" Binding="consumer_electronics" Category="23" Date="January 12, 2016"
+              DeviceType="BROWSER" EDate="1452556800" Earnings="0,22" LinkType="as2" Price="7,37" Qty="1" Rate="2,99"
+              Revenue="7,37" Seller="" Tag="klein0rde-21"
+              Title="Geh&#228;use (OneNineDesign) f&#252;r Raspberry Pi 2 und Raspberry Pi Model B+, schwarz/black, bel&#252;ftet, europ&#228;ische Fertigung"/>
+        <Item ASIN="B00WDZ9JZM" Binding="apparel" Category="193" Date="January 21, 2016" DeviceType="BROWSER"
+              EDate="1453334400" Earnings="-2,30" LinkType="asn" Price="22,99" Qty="-1" Rate="10,00" Revenue="-22,99"
+              Seller="" Tag="mkleine-21"
+              Title="FeelinGirl Training Sport Korsage Damen Latex Cincher mit Tr&#228;gern L" Type="Return"/>
+        <Item ASIN="B014DP7604" Binding="kindle_edition" Category="351" Date="January 13, 2016" DeviceType="BROWSER"
+              EDate="1452643200" Earnings="0,25" LinkType="as2" Price="2,51" Qty="1" Rate="9,96" Revenue="2,51"
+              Seller="" Tag="klein0rde-21" Title="openHAB: Automatisiertes Heim - Teil 1 (shortcuts 155)"/>
+        <Item ASIN="B015E8EDYQ" Binding="consumer_electronics" Category="147" Date="January 25, 2016"
+              DeviceType="BROWSER" EDate="1453680000" Earnings="1,92" LinkType="as2" Price="63,99" Qty="1" Rate="3,00"
+              Revenue="63,99" Seller="" Tag="klein0rde-21"
+              Title="Waveshare 7 inch 1024*600 Capacitive Touch Screen LCD Display HDMI Interface Custom Raspbian Angstrom Supports Various Systems for All Ver. Raspberry "/>
+        <Item ASIN="B018G1RK7U" Binding="Unknown" Category="229" Date="January 26, 2016" DeviceType="MOBILE_BROWSER"
+              EDate="1453766400" Earnings="2,52" LinkType="asn" Price="17,96" Qty="2" Rate="7,02" Revenue="35,92"
+              Seller="" Tag="haus-automatisierung-21"
+              Title="Force Attax - Star Wars - Erwachen der Macht - Tin - Deutsch"/>
+    </Items>
+    <AMZNShipmentTotals>
+        <Earnings>9,32</Earnings>
+        <Revenue>201,80</Revenue>
+        <Units>17</Units>
+    </AMZNShipmentTotals>
+    <NonAMZNShipmentTotals>
+        <Earnings>22,19</Earnings>
+        <Revenue>481,64</Revenue>
+        <Units>23</Units>
+    </NonAMZNShipmentTotals>
+    <ShipmentTotals>
+        <Earnings>31,51</Earnings>
+        <Revenue>683,44</Revenue>
+        <Units>40</Units>
+    </ShipmentTotals>
+    <ReturnedTotals>
+        <Earnings>4,20</Earnings>
+        <Revenue>60,98</Revenue>
+        <Units>2</Units>
+    </ReturnedTotals>
+    <RefundedTotals>
+        <Earnings>0,00</Earnings>
+        <Revenue>0,00</Revenue>
+        <Units>0</Units>
+    </RefundedTotals>
+    <ReferralFeeTotals>
+        <Earnings>27,31</Earnings>
+        <Revenue>622,46</Revenue>
+        <Units>38</Units>
+    </ReferralFeeTotals>
+    <EventTotals>
+    </EventTotals>
+    <FinalEarnings>27,31</FinalEarnings>
+
+    <ProductLine_array>
+        <ProductLine>
+            <GLProductGroupID>63</GLProductGroupID>
+            <ProductGroupName>Games</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>21</GLProductGroupID>
+            <ProductGroupName>Spielzeug</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>309</GLProductGroupID>
+            <ProductGroupName>Schuhe</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>241</GLProductGroupID>
+            <ProductGroupName>Uhren</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>198</GLProductGroupID>
+            <ProductGroupName>Gepäck</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>129</GLProductGroupID>
+            <ProductGroupName>Hörbuch-Downloads</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>193</GLProductGroupID>
+            <ProductGroupName>Bekleidung</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>200</GLProductGroupID>
+            <ProductGroupName>Sport &amp; Freizeit</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>366</GLProductGroupID>
+            <ProductGroupName>Digitale Software</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>351</GLProductGroupID>
+            <ProductGroupName>Kindle eBooks</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>27</GLProductGroupID>
+            <ProductGroupName>VHS</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>74</GLProductGroupID>
+            <ProductGroupName>DVD</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>147</GLProductGroupID>
+            <ProductGroupName>Computers</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>437</GLProductGroupID>
+            <ProductGroupName></ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>228</GLProductGroupID>
+            <ProductGroupName>Geschenkkarte</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>75</GLProductGroupID>
+            <ProductGroupName>Baby</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>194</GLProductGroupID>
+            <ProductGroupName>Parfümerie &amp; Kosmetik</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>14</GLProductGroupID>
+            <ProductGroupName>Bücher</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>201</GLProductGroupID>
+            <ProductGroupName>Home</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>263</GLProductGroupID>
+            <ProductGroupName>Auto und Motorrad</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>267</GLProductGroupID>
+            <ProductGroupName>Musikinstrumente &amp; DJ</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>79</GLProductGroupID>
+            <ProductGroupName>Küche &amp; Haushaltswaren</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>121</GLProductGroupID>
+            <ProductGroupName>Drogerie &amp; Bad</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>349</GLProductGroupID>
+            <ProductGroupName>Kindle Geräte</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>0</GLProductGroupID>
+            <ProductGroupName>Andere</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>318</GLProductGroupID>
+            <ProductGroupName>Amazon Instant Video</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>23</GLProductGroupID>
+            <ProductGroupName>Elektronik &amp; Foto</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>325</GLProductGroupID>
+            <ProductGroupName>Lebensmittel &amp; Getränke</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>364</GLProductGroupID>
+            <ProductGroupName>Drogerie &amp; Bad - Elektrogeräte und Zubehör</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>65</GLProductGroupID>
+            <ProductGroupName>Software</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>197</GLProductGroupID>
+            <ProductGroupName>Schmuck</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>350</GLProductGroupID>
+            <ProductGroupName>Kindle Zeitschriften</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>199</GLProductGroupID>
+            <ProductGroupName>Haustier</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>15</GLProductGroupID>
+            <ProductGroupName>Musik</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>367</GLProductGroupID>
+            <ProductGroupName>Spiele-Downloads</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>60</GLProductGroupID>
+            <ProductGroupName>Baumarkt</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>265</GLProductGroupID>
+            <ProductGroupName>Elektro-Großgeräte</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>229</GLProductGroupID>
+            <ProductGroupName>Bürobedarf</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>86</GLProductGroupID>
+            <ProductGroupName>Garten &amp; Freizeit</ProductGroupName>
+        </ProductLine>
+        <ProductLine>
+            <GLProductGroupID>340</GLProductGroupID>
+            <ProductGroupName>MP3-Downloads</ProductGroupName>
+        </ProductLine>
+    </ProductLine_array>
+    <EventDefinition_array>
+        <EventDefinition type="PYA-verified listing">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="PYA-verified listing-invalidated">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Audible Free Trial">
+            <Name>Audible Probe Abo</Name>
+        </EventDefinition>
+        <EventDefinition type="Show phone numbers">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="US Electronics Trade-In">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="MYHABIT_new_sign_up">
+            <Name>Anmeldungen Amazon BuyVIP</Name>
+        </EventDefinition>
+        <EventDefinition type="Baby Registry Create FP Bounty">
+            <Name>BabyRegistry Bounty on First Purchase after Create</Name>
+        </EventDefinition>
+        <EventDefinition type="Prime_free">
+            <Name>Prime Test-Mitgliedschaft</Name>
+        </EventDefinition>
+        <EventDefinition type="ProductAds_Launch">
+            <Name>Amazon Produktanzeigen-Werber Start</Name>
+        </EventDefinition>
+        <EventDefinition type="Family 30-day FT">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="PYA-unverified listing-invalidated">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Audible Membership">
+            <Name>Audible Flexi-Abo</Name>
+        </EventDefinition>
+        <EventDefinition type="GiftCertificate">
+            <Name>Geschenkgutschein-Verkäufe</Name>
+        </EventDefinition>
+        <EventDefinition type="PIV_yearly_paid">
+            <Name>Prime Instant Video Mitgliedschaft (jährlich)</Name>
+        </EventDefinition>
+        <EventDefinition type="Baby Registry FP Bounty">
+            <Name>BabyRegistry Bounty on First Purchase</Name>
+        </EventDefinition>
+        <EventDefinition type="Baby Registry Create Bounty">
+            <Name>BabyRegistry Bounty on Create</Name>
+        </EventDefinition>
+        <EventDefinition type="DE Movies TV Trade-In">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="US Video Games Trade-In">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Wedding Registry Create Bounty">
+            <Name>Wedding Registry Create Bounty</Name>
+        </EventDefinition>
+        <EventDefinition type="tradeInElectronics">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="One_Year_Paid_Prime_Plan_for_Amazon_Student_Program">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Prime Music Yearly Paid">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="DV Initial Prime Stream">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="DVDRentalDirect">
+            <Name>DVD-Verleih direkt</Name>
+        </EventDefinition>
+        <EventDefinition type="Prime one month free trial_115">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="PIV_yearly_free">
+            <Name>Prime Instant Video jährliche Test-Mitgliedschaft</Name>
+        </EventDefinition>
+        <EventDefinition type="KU Free trial start">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Call seller">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="DE Video Games Trade-In">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="tradeInMovies">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="DVDRentalIndirect">
+            <Name>DVD Verleih indirekt</Name>
+        </EventDefinition>
+        <EventDefinition type="PIV_monthly_paid">
+            <Name>Prime Instant Video Mitgliedschaft (monatlich)</Name>
+        </EventDefinition>
+        <EventDefinition type="Buy on Seller site">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Six_Month_Free_Trial_Prime_Plan_for_Amazon_Student_Program">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Mom HO">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="UK Textbooks Trade-In">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="PIV_plus_rental_monthly_paid">
+            <Name>Prime Instant Video und DVD-Verleih Mitgliedschaft (monatlich)</Name>
+        </EventDefinition>
+        <EventDefinition type="UK Video Games Trade-In">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="KindleSubscription">
+            <Name>Kindle Abonnement Verweise</Name>
+        </EventDefinition>
+        <EventDefinition type="JP Music CD Trade-In">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="CloudPlayerBounty">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Prime_club_one_month_free_trial">
+            <Name>Prime Free Trial</Name>
+        </EventDefinition>
+        <EventDefinition type="Payments Registration">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="BloggerComReferrals">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="PYA-unverified listing">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="MP3NewCustomer">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="PIV_plus_rental_monthly_free">
+            <Name>Prime Instant Video Test-Mitgliedschaft</Name>
+        </EventDefinition>
+        <EventDefinition type="KU Free Trial end">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="US Music CD Trade-In">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="CPC_Credit_bounty">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="KU Free 7 day preview end">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Prime Music 30 Day Free Trial">
+            <Name>Prime Music One Month Free Trial</Name>
+        </EventDefinition>
+        <EventDefinition type="Wedding Registry Create FP Bounty">
+            <Name>Wedding Registry Create FP Bounty</Name>
+        </EventDefinition>
+        <EventDefinition type="Payments Launch">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Kindle_Book_Club_Subscription">
+            <Name>Associate fee for books sent out through your Kindle Book Club</Name>
+        </EventDefinition>
+        <EventDefinition type="JP Movies TV Trade-In">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="CPC_Debit_bounty">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="KU 24-month subscription start">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="PrimeBounty">
+            <Name>Prime-Mitglieder-Empfehlungen</Name>
+        </EventDefinition>
+        <EventDefinition type="ProductAds_RegistrationComplete">
+            <Name>Amazon Product Ads Advertiser Registration</Name>
+        </EventDefinition>
+        <EventDefinition type="Find Low Prices Near">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="DE Textbooks Trade-In">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="FR Video Games Trade-In">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Wireless_Event">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Audible Member Credit Purchase">
+            <Name>Audible Flexi-Abo - Guthaben Einlösung</Name>
+        </EventDefinition>
+        <EventDefinition type="Audible membership Content">
+            <Name>Audible membership Content
+            </Name>
+        </EventDefinition>
+        <EventDefinition type="Family Membership Bounty">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="AVOD_associates_new_customers">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="tradeInVideoGames">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Prime Gifting Asin">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="KU 6-month subscription start">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Prime Music Conversion from Free to Paid Yearly">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="1Button App">
+            <Name>1Button App</Name>
+        </EventDefinition>
+        <EventDefinition type="Prime_instant_videos_1Mo_Free_Trial">
+            <Name>Prime Digital Free Trial</Name>
+        </EventDefinition>
+        <EventDefinition type="PIV_Monthly_free_trial">
+            <Name>Prime Instant Video Test-Mitgliedschaft</Name>
+        </EventDefinition>
+        <EventDefinition type="Buy on Junglee">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Family AP">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Mom_Free_Trial">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="KU 12-month subscription start">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="KU Paid subscription end">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Mom_Paid">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Buy on Seller Site-Invalidated">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="KCP New Customer Signup">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="tradeInTextbooks">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Sell on Amazon Launch">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Pic Pac Pay Sellers">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Mom FT">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="US Textbooks Trade-In">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="FR Textbooks Trade-In">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Prime_club_annually">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Sell on Amazon Registration">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Wedding Registry FP Bounty">
+            <Name>Wedding Registry FP Bounty</Name>
+        </EventDefinition>
+        <EventDefinition type="US Movies TV Trade-In">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Family HO">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="JP Video Games Trade-In">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Clicks Quickr Ads">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="PYA-live ad">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="KCR New Customer Sign Up">
+            <Name>Kindle Lese-App Registrierungen</Name>
+        </EventDefinition>
+        <EventDefinition type="AmazonFresh Paid Membership">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Prime_instant_videos">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Mom AP">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="DV non-Initial Prime Stream">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="KU Free 7 day preview start">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="KU Paid subscription start">
+            <Name></Name>
+        </EventDefinition>
+        <EventDefinition type="Audible Cash Purchase">
+            <Name>Audible Einzelkauf</Name>
+        </EventDefinition>
+        <EventDefinition type="Prime_paid">
+            <Name>Prime Mitgliedschaft (jährlich)</Name>
+        </EventDefinition>
+    </EventDefinition_array>
+</Data>

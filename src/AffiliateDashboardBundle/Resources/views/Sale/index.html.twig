@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Sale list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Asin</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>Earnings</th>
+                <th>Linktype</th>
+                <th>Rate</th>
+                <th>Qty</th>
+                <th>Revenue</th>
+                <th>Tag</th>
+                <th>Title</th>
+                <th>Seller</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for sale in sales %}
+            <tr>
+                <td><a href="{{ path('sale_show', { 'id': sale.id }) }}">{{ sale.id }}</a></td>
+                <td>{{ sale.asin }}</td>
+                <td>{{ sale.category }}</td>
+                <td>{% if sale.date %}{{ sale.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ sale.earnings }}</td>
+                <td>{{ sale.linkType }}</td>
+                <td>{{ sale.rate }}</td>
+                <td>{{ sale.qty }}</td>
+                <td>{{ sale.revenue }}</td>
+                <td>{{ sale.tag }}</td>
+                <td>{{ sale.title }}</td>
+                <td>{{ sale.seller }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('sale_show', { 'id': sale.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}
