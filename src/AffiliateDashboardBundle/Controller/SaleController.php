@@ -2,13 +2,14 @@
 
 namespace AffiliateDashboardBundle\Controller;
 
-
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use AffiliateDashboardBundle\Service\Xmlfile;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use AffiliateDashboardBundle\Form\Upload;
 use AffiliateDashboardBundle\Entity\Sale;
 
 /**
@@ -21,30 +22,57 @@ class SaleController extends Controller
     /**
      * Upload sales form
      *
-     * @Route("/", name="sale_add")
-     * @Method("GET")
+     * @Route("/add", name="sale_add")
      */
-    public function addAction()
+    public function addAction(Request $request)
     {
-        $form = $this->createFormBuilder()
-            ->add('xml_file', FileType::class)
-            ->add('save', SubmitType::class, array('label' => 'Upload file'))
-            ->getForm();
+        $xmlFile = new Xmlfile();
+        $form = $this->createForm(Upload::class, $xmlFile);
 
-        return $this->render('AffiliateDashboardBundle:Sale:add.html.twig', array(
-            'form' => $form->createView(),
-        ));
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            /** @var \Symfony\Component\HttpFoundation\File\UploadedFile $file */
+            $file = $xmlFile->getData();
+
+            // Generate a unique name for the file before saving it
+            $fileName = md5(uniqid()) . '.' . $file->guessExtension();
+
+            // Move the file
+            $reportDir = $this->container->getParameter('kernel.root_dir') . '/../web/uploads/reports';
+
+            /** @var $savedFile \Symfony\Component\HttpFoundation\File\File */
+            $savedFile = $file->move($reportDir, $fileName);
+
+            $em = $this->getDoctrine()->getManager();
+
+            foreach ($xmlFile->crawl($savedFile) as $sale) {
+                $em->persist($sale);
+            }
+
+            $em->flush();
+
+            return $this->redirectToRoute('sale_success');
+        }
+
+        return $this->render(
+            'AffiliateDashboardBundle:Sale:add.html.twig',
+            array(
+                'form' => $form->createView(),
+            )
+        );
     }
 
     /**
      * Upload new sales file
      *
-     * @Route("/", name="sale_upload")
-     * @Method("POST")
+     * @Route("/success", name="sale_success")
+     * @Method("GET")
      */
-    public function uploadAction()
+    public function successAction()
     {
-
+        return $this->render('AffiliateDashboardBundle:Sale:success.html.twig');
     }
 
     /**
@@ -59,9 +87,12 @@ class SaleController extends Controller
 
         $sales = $em->getRepository('AffiliateDashboardBundle:Sale')->findAll();
 
-        return $this->render('AffiliateDashboardBundle:Sale:index.html.twig', array(
-            'sales' => $sales,
-        ));
+        return $this->render(
+            'AffiliateDashboardBundle:Sale:index.html.twig',
+            array(
+                'sales' => $sales,
+            )
+        );
     }
 
     /**
@@ -72,8 +103,11 @@ class SaleController extends Controller
      */
     public function showAction(Sale $sale)
     {
-        return $this->render('AffiliateDashboardBundle:Sale:show.html.twig', array(
-            'sale' => $sale,
-        ));
+        return $this->render(
+            'AffiliateDashboardBundle:Sale:show.html.twig',
+            array(
+                'sale' => $sale,
+            )
+        );
     }
 }

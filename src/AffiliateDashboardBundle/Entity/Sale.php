@@ -64,6 +64,13 @@ class Sale
     private $rate;
 
     /**
+     * @var float
+     *
+     * @ORM\Column(name="price", type="float")
+     */
+    private $price;
+
+    /**
      * @var int
      *
      * @ORM\Column(name="qty", type="integer")
@@ -251,6 +258,30 @@ class Sale
     public function getRate()
     {
         return $this->rate;
+    }
+
+    /**
+     * Set price
+     *
+     * @param float $price
+     *
+     * @return Sale
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    /**
+     * Get price
+     *
+     * @return float
+     */
+    public function getPrice()
+    {
+        return $this->price;
     }
 
     /**
