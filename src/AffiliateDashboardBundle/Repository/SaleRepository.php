@@ -10,4 +10,23 @@ namespace AffiliateDashboardBundle\Repository;
  */
 class SaleRepository extends \Doctrine\ORM\EntityRepository
 {
+
+    // price * qty = revenue
+    // revenue / rate = earnings
+
+    public function getSalesPerMonth()
+    {
+        $subselect = $this->createQueryBuilder('s')
+            ->select('YEAR(s.date) AS agYear, MONTH(s.date) AS agMonth, SUM(s.earnings) AS agEuro')
+            ->groupBy('agYear')
+            ->addGroupBy('agMonth');
+
+        $arr = array();
+        foreach ($subselect->getQuery()->getArrayResult() as $item) {
+            $key = sprintf('%s-%s', $item['agYear'], $item['agMonth']);
+            $arr[$key] = $item['agEuro'];
+        }
+        return $arr;
+    }
+
 }
