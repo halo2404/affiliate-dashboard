@@ -23,8 +23,10 @@ class SaleRepository extends \Doctrine\ORM\EntityRepository
 
         $arr = array();
         foreach ($subselect->getQuery()->getArrayResult() as $item) {
-            $key = sprintf('%s-%s', $item['agYear'], $item['agMonth']);
-            $arr[$key] = $item['agEuro'];
+            $key = sprintf('%d-%02d', $item['agYear'], $item['agMonth']);
+            $arr[$key] = array(
+                (float)$item['agEuro']
+            );
         }
         return $arr;
     }

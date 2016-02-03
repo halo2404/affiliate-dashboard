@@ -60,6 +60,11 @@ doctrine:
         auto_generate_proxy_classes: "%kernel.debug%"
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
+        dql:
+            string_functions:
+                groupconcat: DoctrineExtensions\Query\Mysql\GroupConcat
+                year: DoctrineExtensions\Query\Mysql\Year
+                month: DoctrineExtensions\Query\Mysql\Month
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -68,3 +73,14 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+assetic:
+    filters:
+        less:
+            node: /usr/local/bin/node
+            node_paths: [/usr/local/lib/node_modules]
+            apply_to: "\\.less$"
+        cssrewrite: ~
+
+braincrafted_bootstrap:
+    css_preprocessor: less

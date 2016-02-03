@@ -35,16 +35,19 @@ class ChartController extends Controller
 
         // Chart
         $series = array(
-            array('name' => 'Sales per Month', 'data' => $sales)
+            array('name' => 'Earnings', 'data' => array_values($sales))
         );
 
         $ob = new Highchart();
 
+        $ob->chart->type('line');
         $ob->chart->renderTo('linechart'); // The #id of the div where to render the chart
 
-        $ob->title->text('Chart Title');
-        $ob->xAxis->title(array('text' => 'Horizontal axis title'));
-        $ob->yAxis->title(array('text' => 'Vertical axis title'));
+        $ob->title->text('Sales per Month');
+
+        $ob->xAxis->categories(array_keys($sales));
+        $ob->xAxis->title(array('text' => 'Month'));
+        $ob->yAxis->title(array('text' => 'Euro'));
 
         $ob->series($series);
 
