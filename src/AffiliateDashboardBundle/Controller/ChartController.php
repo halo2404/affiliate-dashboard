@@ -16,7 +16,7 @@ use AffiliateDashboardBundle\Entity\Sale;
 /**
  * Sale controller.
  *
- * @Route("/chart")
+ * @Route("/{_locale}/chart")
  */
 class ChartController extends Controller
 {

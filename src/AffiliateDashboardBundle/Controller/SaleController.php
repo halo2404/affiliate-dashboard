@@ -15,7 +15,7 @@ use AffiliateDashboardBundle\Entity\Sale;
 /**
  * Sale controller.
  *
- * @Route("/sale")
+ * @Route("/{_locale}/sale")
  */
 class SaleController extends Controller
 {
