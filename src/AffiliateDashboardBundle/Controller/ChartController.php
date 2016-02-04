@@ -24,7 +24,7 @@ class ChartController extends Controller
     /**
      * Upload new sales file
      *
-     * @Route("/overview", name="chart_overview")
+     * @Route("/", name="chart_overview")
      * @Method("GET")
      */
     public function overviewAction()
@@ -41,7 +41,7 @@ class ChartController extends Controller
         $ob = new Highchart();
 
         $ob->chart->type('line');
-        $ob->chart->renderTo('linechart'); // The #id of the div where to render the chart
+        $ob->chart->renderTo('chart');
 
         $ob->title->text('Sales per Month');
 
@@ -52,7 +52,7 @@ class ChartController extends Controller
         $ob->series($series);
 
         return $this->render(
-            'AffiliateDashboardBundle:Chart:overview.html.twig',
+            'AffiliateDashboardBundle:Chart:chart.html.twig',
             array('chart' => $ob)
         );
     }
