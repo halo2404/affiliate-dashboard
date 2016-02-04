@@ -16,20 +16,12 @@
         {% for blogpost in blogposts %}
             <tr>
                 <td>{{ blogpost.title }}</td>
-                <td>{% if blogpost.publishedAt %}{{ blogpost.publishedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if blogpost.publishedAt %}{{ blogpost.publishedAt|localizeddate('medium', 'none') }}{% endif %}</td>
                 <td>{{ blogpost.affiliateTag }}</td>
                 <td>
-                    <ul>
-                        <li>
-                            <a href="{{ blogpost.url }}">open blogpost</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('blogpost_show', { 'id': blogpost.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('blogpost_edit', { 'id': blogpost.id }) }}">edit</a>
-                        </li>
-                    </ul>
+                    <a type="button" class="btn btn-default" href="{{ blogpost.url }}">open blogpost</a>
+                    <a type="button" class="btn btn-primary" href="{{ path('blogpost_show', { 'id': blogpost.id }) }}">show</a>
+                    <a type="button" class="btn btn-info" href="{{ path('blogpost_edit', { 'id': blogpost.id }) }}">edit</a>
                 </td>
             </tr>
         {% endfor %}

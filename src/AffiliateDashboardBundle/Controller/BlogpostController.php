@@ -12,7 +12,7 @@ use AffiliateDashboardBundle\Form\BlogpostType;
 /**
  * Blogpost controller.
  *
- * @Route("/blogpost")
+ * @Route("/{_locale}/blogpost")
  */
 class BlogpostController extends Controller
 {

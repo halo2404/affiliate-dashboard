@@ -28,7 +28,9 @@
                 <td>{{ sale.revenue|localizedcurrency('EUR') }}</td>
                 <td>{{ sale.tag }}</td>
                 <td>{{ sale.title }}</td>
-                <td><a href="{{ path('sale_show', { 'id': sale.id }) }}">show</a></td>
+                <td>
+                    <a type="button" class="btn btn-primary" href="{{ path('sale_show', { 'id': sale.id }) }}">show</a>
+                </td>
             </tr>
         {% endfor %}
         </tbody>
