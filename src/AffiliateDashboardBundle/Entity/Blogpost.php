@@ -2,6 +2,7 @@
 
 namespace AffiliateDashboardBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -42,7 +43,6 @@ class Blogpost
      */
     private $url;
 
-
     /**
      * @var string
      *
@@ -50,6 +50,61 @@ class Blogpost
      */
     private $affiliateTag;
 
+    /**
+     * @ORM\OneToMany(targetEntity="BlogpostUser" , mappedBy="blogpost" , cascade={"all"})
+     */
+    private $blogpostUser;
+
+    private $users;
+
+    function __construct()
+    {
+        $this->blogpostUser = new ArrayCollection();
+        $this->users = new ArrayCollection();
+    }
+
+    function __toString()
+    {
+        return $this->getTitle();
+    }
+
+    public function getUser()
+    {
+        $users = new ArrayCollection();
+
+        foreach ($this->blogpostUser as $bu) {
+            $users[] = $bu->getUser();
+        }
+
+        return $users;
+    }
+
+    public function setUser($users)
+    {
+        foreach ($users as $user) {
+            $bu = new BlogpostUser();
+
+            $bu->setBlogpost($this);
+            $bu->setUser($user);
+
+            $this->addBlogpostUser($bu);
+        }
+    }
+
+    public function getBlogpost()
+    {
+        return $this;
+    }
+
+    public function addBlogpostUser($blogpostUser)
+    {
+        $this->blogpostUser[] = $blogpostUser;
+    }
+
+    public function removeBlogpostUser($blogpostUser)
+    {
+        return $this->blogpostUser->removeElement($blogpostUser);
+    }
 
     /**
      * Get id
@@ -151,6 +206,14 @@ class Blogpost
     public function setAffiliateTag($affiliateTag)
     {
         $this->affiliateTag = $affiliateTag;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBlogpostUser()
+    {
+        return $this->blogpostUser;
     }
 }
 

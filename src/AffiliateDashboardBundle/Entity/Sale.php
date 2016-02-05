@@ -105,6 +105,10 @@ class Sale
      */
     private $seller;
 
+    function __toString()
+    {
+        return $this->getTitle();
+    }
 
     /**
      * Get id

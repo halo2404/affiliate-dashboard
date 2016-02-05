@@ -88,6 +88,14 @@ class BlogpostController extends Controller
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
+
+            $previousCollections = $blogpost->getBlogpostUser();
+            $previousCollections = $previousCollections->toArray();
+
+            foreach($previousCollections as $bu) {
+                #$blogpost->removeBlogpostUser($bu);
+            }
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($blogpost);
             $em->flush();

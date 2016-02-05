@@ -2,6 +2,8 @@
 
 namespace AffiliateDashboardBundle\Form;
 
+use AffiliateDashboardBundle\Entity\User;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -20,9 +22,19 @@ class BlogpostType extends AbstractType
             ->add('publishedAt', DatetimeType::class)
             ->add('url')
             ->add('affiliateTag')
+            ->add(
+                'user',
+                EntityType::class,
+                array(
+                    'class' => User::class,
+                    'choice_label' => 'name',
+                    'expanded' => true,
+                    'multiple' => true
+                )
+            )
         ;
     }
-    
+
     /**
      * @param OptionsResolver $resolver
      */

@@ -2,6 +2,7 @@
 
 namespace AffiliateDashboardBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -28,6 +29,20 @@ class User
      */
     private $name;
 
+    /**
+     * @ORM\OneToMany(targetEntity="BlogpostUser", mappedBy="user", cascade={"all"})
+     */
+    private $blogpostUser;
+
+    function __construct()
+    {
+        $this->blogpostUser = new ArrayCollection();
+    }
+
+    function __toString()
+    {
+        return $this->getName();
+    }
 
     /**
      * Get id
