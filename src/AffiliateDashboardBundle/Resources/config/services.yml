@@ -3,3 +3,9 @@ services:
         class: AffiliateDashboardBundle\Service\Xmlfile
         arguments:
             entityManager: "@doctrine.orm.entity_manager"
+
+    affiliate_dashboard.twig.propertysum:
+        class: AffiliateDashboardBundle\Service\PropertySum
+        public: false
+        tags:
+            - { name: twig.extension }

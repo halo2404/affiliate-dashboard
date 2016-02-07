@@ -22,7 +22,7 @@ class ChartController extends Controller
 {
 
     /**
-     * Upload new sales file
+     * Sales per month overview
      *
      * @Route("/", name="chart_overview")
      * @Method("GET")
@@ -56,5 +56,6 @@ class ChartController extends Controller
             array('chart' => $ob)
         );
     }
+
 
 }

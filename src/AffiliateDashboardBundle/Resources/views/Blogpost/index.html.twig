@@ -9,6 +9,7 @@
                 <th>Title</th>
                 <th>Published at</th>
                 <th>Tag</th>
+                <th>Sales</th>
                 <th>Users</th>
                 <th>Actions</th>
             </tr>
@@ -19,6 +20,10 @@
                 <td>{{ blogpost.title }}</td>
                 <td>{% if blogpost.publishedAt %}{{ blogpost.publishedAt|localizeddate('medium', 'none') }}{% endif %}</td>
                 <td>{{ blogpost.affiliateTag }}</td>
+                <td>
+                    <span class="label label-default">{{ blogpost.affiliateTag.sales|length }} sales</span>
+                    <span class="label label-success">{{ blogpost.affiliateTag.sales|propertySum('earnings')|localizedcurrency('EUR') }} earned</span>
+                </td>
                 <td>
                     {% for bu in blogpost.blogpostUser %}
                         <span class="label label-default">{{ bu.user.name }} - {{ bu.percentage }}%</span>

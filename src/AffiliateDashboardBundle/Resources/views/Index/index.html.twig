@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="jumbotron">
+            <h1>Affiliate-Dashboard 0.1</h1>
+            <p>
+                <ul>
+                    <li>Create and manage blogposts</li>
+                    <li>Create users and define their revenue in percent for sales</li>
+                    <li>Map tags and users to blogposts</li>
+                    <li>Get some nice charts about your users sales</li>
+                </ul>
+            </p>
+            <p><a class="btn btn-primary btn-lg" href="{{ path('sale_add') }}" role="button">Upload your first XML report</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}
