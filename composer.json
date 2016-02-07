@@ -1,6 +1,6 @@
 {
-    "name": "matthiaskleine/affiliate.dashboard",
-    "license": "proprietary",
+    "name": "klein0r/affiliate.dashboard",
+    "license": "MIT",
     "type": "project",
     "autoload": {
         "psr-4": {

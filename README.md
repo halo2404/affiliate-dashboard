@@ -1,8 +1,24 @@
 Affiliate-Dashboard
 ===================
 
+[![Code Climate](https://codeclimate.com/github/klein0r/affiliate-dashboard/badges/gpa.svg)](https://codeclimate.com/github/klein0r/affiliate-dashboard)
+
 - Upload Amazon Partnetnet XML files
 - Get information about sales, revenue and performing categories
+
+## Installation
+
+Get composer
+
+```
+curl -sS https://getcomposer.org/installer | php
+```
+
+Install the current version
+
+```
+php composer.phar install
+```
 
 ## Technologies
 
