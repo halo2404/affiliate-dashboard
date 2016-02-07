@@ -1,7 +1,7 @@
 Affiliate-Dashboard
 ===================
 
-[![Code Climate](https://codeclimate.com/github/klein0r/affiliate-dashboard/badges/gpa.svg)](https://codeclimate.com/github/klein0r/affiliate-dashboard)
+[![Latest Stable Version](https://poser.pugx.org/klein0r/affiliate.dashboard/v/stable)](https://packagist.org/packages/klein0r/affiliate.dashboard) [![Total Downloads](https://poser.pugx.org/klein0r/affiliate.dashboard/downloads)](https://packagist.org/packages/klein0r/affiliate.dashboard) [![Latest Unstable Version](https://poser.pugx.org/klein0r/affiliate.dashboard/v/unstable)](https://packagist.org/packages/klein0r/affiliate.dashboard) [![License](https://poser.pugx.org/klein0r/affiliate.dashboard/license)](https://packagist.org/packages/klein0r/affiliate.dashboard) [![Code Climate](https://codeclimate.com/github/klein0r/affiliate-dashboard/badges/gpa.svg)](https://codeclimate.com/github/klein0r/affiliate-dashboard)
 
 - Upload Amazon Partnetnet XML files
 - Get information about sales, revenue and performing categories
