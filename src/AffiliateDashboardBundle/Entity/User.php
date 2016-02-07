@@ -39,6 +39,9 @@ class User
         $this->blogpostUser = new ArrayCollection();
     }
 
+    /**
+     * @return string
+     */
     function __toString()
     {
         return $this->getName();

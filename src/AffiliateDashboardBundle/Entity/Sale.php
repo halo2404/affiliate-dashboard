@@ -106,6 +106,9 @@ class Sale
      */
     private $seller;
 
+    /**
+     * @return string
+     */
     function __toString()
     {
         return $this->getTitle();

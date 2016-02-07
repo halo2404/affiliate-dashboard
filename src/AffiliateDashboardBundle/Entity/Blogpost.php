@@ -61,6 +61,9 @@ class Blogpost
         $this->blogpostUser = new ArrayCollection();
     }
 
+    /**
+     * @return string
+     */
     function __toString()
     {
         return $this->getTitle();

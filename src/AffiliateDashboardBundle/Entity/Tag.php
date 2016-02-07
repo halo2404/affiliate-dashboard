@@ -2,6 +2,7 @@
 
 namespace AffiliateDashboardBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -28,6 +29,29 @@ class Tag
      */
     private $name;
 
+    /**
+     * @var ArrayCollection
+     *
+     * @ORM\OneToMany(targetEntity="Blogpost" , mappedBy="affiliateTag" , cascade={"all"})
+     */
+    private $blogposts;
+
+    /**
+     * @var ArrayCollection
+     *
+     * @ORM\OneToMany(targetEntity="Sale" , mappedBy="affiliateTag" , cascade={"all"})
+     */
+    private $sales;
+
+    function __construct()
+    {
+        $this->blogposts = new ArrayCollection();
+        $this->sales = new ArrayCollection();
+    }
+
+    /**
+     * @return string
+     */
     function __toString()
     {
         return $this->getName();
@@ -65,6 +89,38 @@ class Tag
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBlogposts()
+    {
+        return $this->blogposts;
+    }
+
+    /**
+     * @param mixed $blogposts
+     */
+    public function setBlogposts($blogposts)
+    {
+        $this->blogposts = $blogposts;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSales()
+    {
+        return $this->sales;
+    }
+
+    /**
+     * @param mixed $sales
+     */
+    public function setSales($sales)
+    {
+        $this->sales = $sales;
     }
 }
 
