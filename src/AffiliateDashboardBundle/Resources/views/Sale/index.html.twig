@@ -8,10 +8,10 @@
             <tr>
                 <th>Asin</th>
                 <th>Date</th>
-                <th>Earnings</th>
                 <th>Rate</th>
                 <th>Qty</th>
                 <th>Revenue</th>
+                <th>Earnings</th>
                 <th>Tag</th>
                 <th>Title</th>
                 <th>Actions</th>
@@ -22,10 +22,10 @@
             <tr>
                 <td>{{ sale.asin }}</td>
                 <td>{% if sale.date %}{{ sale.date|localizeddate('medium', 'none') }}{% endif %}</td>
-                <td>{{ sale.earnings|localizedcurrency('EUR') }}</td>
-                <td>{{ sale.rate }}%</td>
-                <td>{{ sale.qty }}</td>
+                <td>{{ sale.rate|localizednumber }}%</td>
+                <td>{{ sale.qty|localizednumber }}</td>
                 <td>{{ sale.revenue|localizedcurrency('EUR') }}</td>
+                <td>{{ (sale.earnings * sale.qty)|localizedcurrency('EUR') }}</td>
                 <td>{{ sale.affiliateTag.name }}</td>
                 <td>{{ sale.title }}</td>
                 <td>
