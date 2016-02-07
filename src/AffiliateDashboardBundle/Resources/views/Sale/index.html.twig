@@ -23,10 +23,10 @@
                 <td>{{ sale.asin }}</td>
                 <td>{% if sale.date %}{{ sale.date|localizeddate('medium', 'none') }}{% endif %}</td>
                 <td>{{ sale.earnings|localizedcurrency('EUR') }}</td>
-                <td>{{ sale.rate }}</td>
+                <td>{{ sale.rate }}%</td>
                 <td>{{ sale.qty }}</td>
                 <td>{{ sale.revenue|localizedcurrency('EUR') }}</td>
-                <td>{{ sale.tag }}</td>
+                <td>{{ sale.affiliateTag.name }}</td>
                 <td>{{ sale.title }}</td>
                 <td>
                     <a type="button" class="btn btn-primary" href="{{ path('sale_show', { 'id': sale.id }) }}">show</a>

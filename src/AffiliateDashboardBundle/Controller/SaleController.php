@@ -7,9 +7,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Form\Extension\Core\Type\FileType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use AffiliateDashboardBundle\Form\Upload;
+use AffiliateDashboardBundle\Form\UploadType;
 use AffiliateDashboardBundle\Entity\Sale;
 
 /**
@@ -26,8 +24,8 @@ class SaleController extends Controller
      */
     public function addAction(Request $request)
     {
-        $xmlFile = new Xmlfile();
-        $form = $this->createForm(Upload::class, $xmlFile);
+        $xmlFile = $this->container->get('affiliate_dashboard.xml.importservice');
+        $form = $this->createForm(UploadType::class, $xmlFile);
 
         $form->handleRequest($request);
 

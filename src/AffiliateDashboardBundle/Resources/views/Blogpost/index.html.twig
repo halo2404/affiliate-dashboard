@@ -9,6 +9,7 @@
                 <th>Title</th>
                 <th>Published at</th>
                 <th>Tag</th>
+                <th>Users</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -18,6 +19,11 @@
                 <td>{{ blogpost.title }}</td>
                 <td>{% if blogpost.publishedAt %}{{ blogpost.publishedAt|localizeddate('medium', 'none') }}{% endif %}</td>
                 <td>{{ blogpost.affiliateTag }}</td>
+                <td>
+                    {% for bu in blogpost.blogpostUser %}
+                        <span class="label label-default">{{ bu.user.name }} - {{ bu.percentage }}%</span>
+                    {% endfor %}
+                </td>
                 <td>
                     <a type="button" class="btn btn-default" href="{{ blogpost.url }}">open blogpost</a>
                     <a type="button" class="btn btn-primary" href="{{ path('blogpost_show', { 'id': blogpost.id }) }}">show</a>

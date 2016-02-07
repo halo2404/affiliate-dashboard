@@ -85,11 +85,12 @@ class Sale
     private $revenue;
 
     /**
-     * @var string
+     * @var Tag
      *
-     * @ORM\Column(name="tag", type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="Tag", inversedBy="sales")
+     * @ORM\JoinColumn(name="tag_id", referencedColumnName="id", nullable=false)
      */
-    private $tag;
+    private $affiliateTag;
 
     /**
      * @var string
@@ -337,27 +338,23 @@ class Sale
     }
 
     /**
-     * Set tag
+     * Set affiliateTag
      *
-     * @param string $tag
-     *
-     * @return Sale
+     * @param Tag $affiliateTag
      */
-    public function setTag($tag)
+    public function setAffiliateTag(Tag $affiliateTag)
     {
-        $this->tag = $tag;
-
-        return $this;
+        $this->affiliateTag = $affiliateTag;
     }
 
     /**
-     * Get tag
+     * Get affiliateTag
      *
-     * @return string
+     * @return Tag
      */
-    public function getTag()
+    public function getAffiliateTag()
     {
-        return $this->tag;
+        return $this->affiliateTag;
     }
 
     /**

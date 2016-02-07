@@ -2,6 +2,7 @@
 
 namespace AffiliateDashboardBundle\Form;
 
+use AffiliateDashboardBundle\Entity\Tag;
 use AffiliateDashboardBundle\Entity\User;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
@@ -21,9 +22,17 @@ class BlogpostType extends AbstractType
             ->add('title')
             ->add('publishedAt', DatetimeType::class)
             ->add('url')
-            ->add('affiliateTag')
             ->add(
-                'user',
+                'affiliateTag',
+                EntityType::class,
+                array(
+                    'class' => Tag::class,
+                    'choice_label' => 'name',
+                    'placeholder' => 'Choose a sale tag',
+                )
+            )
+            ->add(
+                'users',
                 EntityType::class,
                 array(
                     'class' => User::class,

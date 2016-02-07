@@ -44,9 +44,10 @@ class Blogpost
     private $url;
 
     /**
-     * @var string
+     * @var Tag
      *
-     * @ORM\Column(name="affiliate_tag", type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="Tag", inversedBy="blogposts")
+     * @ORM\JoinColumn(name="tag_id", referencedColumnName="id", nullable=false)
      */
     private $affiliateTag;
 
@@ -55,12 +56,9 @@ class Blogpost
      */
     private $blogpostUser;
 
-    private $users;
-
     function __construct()
     {
         $this->blogpostUser = new ArrayCollection();
-        $this->users = new ArrayCollection();
     }
 
     function __toString()
@@ -68,19 +66,21 @@ class Blogpost
         return $this->getTitle();
     }
 
-    public function getUser()
+    public function getUsers()
     {
         $users = new ArrayCollection();
 
-        foreach ($this->blogpostUser as $bu) {
+        /** @var $bu BlogpostUser */
+        foreach ($this->getBlogpostUser() as $bu) {
             $users[] = $bu->getUser();
         }
 
         return $users;
     }
 
-    public function setUser($users)
+    public function setUsers($users)
     {
+        /** @var $user User */
         foreach ($users as $user) {
             $bu = new BlogpostUser();
 
@@ -96,12 +96,14 @@ class Blogpost
         return $this;
     }
 
-    public function addBlogpostUser($blogpostUser)
+    public function addBlogpostUser(BlogpostUser $blogpostUser)
     {
         $this->blogpostUser[] = $blogpostUser;
+
+        return $this;
     }
 
-    public function removeBlogpostUser($blogpostUser)
+    public function removeBlogpostUser(BlogpostUser $blogpostUser)
     {
         return $this->blogpostUser->removeElement($blogpostUser);
     }
@@ -191,7 +193,7 @@ class Blogpost
     /**
      * Get affiliateTag
      *
-     * @return string
+     * @return Tag
      */
     public function getAffiliateTag()
     {
@@ -201,7 +203,7 @@ class Blogpost
     /**
      * Set affiliateTag
      *
-     * @param string $affiliateTag
+     * @param Tag $affiliateTag
      */
     public function setAffiliateTag($affiliateTag)
     {
@@ -216,4 +218,3 @@ class Blogpost
         return $this->blogpostUser;
     }
 }
-

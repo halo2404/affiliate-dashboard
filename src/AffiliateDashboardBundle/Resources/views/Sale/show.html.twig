@@ -19,7 +19,7 @@
             </tr>
             <tr>
                 <th>Earnings</th>
-                <td>{{ sale.earnings }}</td>
+                <td>{{ sale.earnings|localizedcurrency('EUR') }}</td>
             </tr>
             <tr>
                 <th>Linktype</th>
@@ -27,7 +27,7 @@
             </tr>
             <tr>
                 <th>Rate</th>
-                <td>{{ sale.rate }}</td>
+                <td>{{ sale.rate }}%</td>
             </tr>
             <tr>
                 <th>Qty</th>
@@ -35,11 +35,11 @@
             </tr>
             <tr>
                 <th>Revenue</th>
-                <td>{{ sale.revenue }}</td>
+                <td>{{ sale.revenue|localizedcurrency('EUR') }}</td>
             </tr>
             <tr>
                 <th>Tag</th>
-                <td>{{ sale.tag }}</td>
+                <td>{{ sale.affiliateTag.name }}</td>
             </tr>
             <tr>
                 <th>Title</th>

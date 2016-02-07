@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>User list</h1>
+    <h1>Tag list</h1>
 
     <table class="table table-hover table-condensed">
         <thead>
@@ -11,11 +11,11 @@
             </tr>
         </thead>
         <tbody>
-        {% for user in users %}
+        {% for tag in tags %}
             <tr>
-                <td>{{ user.name }}</td>
+                <td>{{ tag.name }}</td>
                 <td>
-                    <a type="button" class="btn btn-info" href="{{ path('user_edit', { 'id': user.id }) }}">edit</a>
+                    <a type="button" class="btn btn-info" href="{{ path('tag_edit', { 'id': tag.id }) }}">edit</a>
                 </td>
             </tr>
         {% endfor %}

@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping\UniqueConstraint;
  * BlogpostUser
  *
  * @ORM\Entity
- * @ORM\Table(name="blogpost_user", uniqueConstraints={@UniqueConstraint(name="bogpostuser_unique", columns={"blogpost_id", "user_id"})})
+ * @ORM\Table(name="blogpost_user", uniqueConstraints={@UniqueConstraint(name="blogpostuser_unique", columns={"blogpost_id", "user_id"})})
  * @ORM\HasLifecycleCallbacks()
  */
 class BlogpostUser
@@ -24,12 +24,16 @@ class BlogpostUser
     private $id;
 
     /**
+     * @var Blogpost
+     *
      * @ORM\ManyToOne(targetEntity="Blogpost", inversedBy="blogpostUser")
      * @ORM\JoinColumn(name="blogpost_id", referencedColumnName="id", nullable=false)
      * */
     private $blogpost;
 
     /**
+     * @var User
+     *
      * @ORM\ManyToOne(targetEntity="User", inversedBy="blogpostUser")
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id", nullable=false)
      * */
@@ -51,7 +55,7 @@ class BlogpostUser
     }
 
     /**
-     * @return mixed
+     * @return Blogpost
      */
     public function getBlogpost()
     {
@@ -59,15 +63,15 @@ class BlogpostUser
     }
 
     /**
-     * @param mixed $blogpost
+     * @param Blogpost $blogpost
      */
-    public function setBlogpost($blogpost)
+    public function setBlogpost(Blogpost $blogpost)
     {
         $this->blogpost = $blogpost;
     }
 
     /**
-     * @return mixed
+     * @return User
      */
     public function getUser()
     {
@@ -75,9 +79,9 @@ class BlogpostUser
     }
 
     /**
-     * @param mixed $user
+     * @param User $user
      */
-    public function setUser($user)
+    public function setUser(User $user)
     {
         $this->user = $user;
     }

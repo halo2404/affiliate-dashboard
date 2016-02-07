@@ -50,28 +50,12 @@ class UserController extends Controller
             $em->persist($user);
             $em->flush();
 
-            return $this->redirectToRoute('user_show', array('id' => $user->getId()));
+            return $this->redirectToRoute('user_index', array('id' => $user->getId()));
         }
 
         return $this->render('AffiliateDashboardBundle:User:new.html.twig', array(
             'user' => $user,
             'form' => $form->createView(),
-        ));
-    }
-
-    /**
-     * Finds and displays a User entity.
-     *
-     * @Route("/{id}", name="user_show")
-     * @Method("GET")
-     */
-    public function showAction(User $user)
-    {
-        $deleteForm = $this->createDeleteForm($user);
-
-        return $this->render('AffiliateDashboardBundle:User:show.html.twig', array(
-            'user' => $user,
-            'delete_form' => $deleteForm->createView(),
         ));
     }
 

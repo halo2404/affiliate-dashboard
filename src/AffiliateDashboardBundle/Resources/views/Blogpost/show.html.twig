@@ -11,7 +11,7 @@
             </tr>
             <tr>
                 <th>Publishedat</th>
-                <td>{% if blogpost.publishedAt %}{{ blogpost.publishedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if blogpost.publishedAt %}{{ blogpost.publishedAt|localizeddate('medium', 'none') }}{% endif %}</td>
             </tr>
             <tr>
                 <th>Url</th>
@@ -19,7 +19,7 @@
             </tr>
             <tr>
                 <th>Tag</th>
-                <td>{{ blogpost.affiliateTag }}</td>
+                <td>{{ blogpost.affiliateTag.name }}</td>
             </tr>
         </tbody>
     </table>
