@@ -107,6 +107,13 @@ class Sale
     private $seller;
 
     /**
+     * @var boolean
+     *
+     * @ORM\Column(name="cleared", type="boolean")
+     */
+    private $cleared = false;
+
+    /**
      * @return string
      */
     function __toString()
@@ -406,6 +413,22 @@ class Sale
     public function getSeller()
     {
         return $this->seller;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getCleared()
+    {
+        return $this->cleared;
+    }
+
+    /**
+     * @param boolean $cleared
+     */
+    public function setCleared($cleared)
+    {
+        $this->cleared = $cleared;
     }
 }
 

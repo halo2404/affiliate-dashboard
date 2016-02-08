@@ -30,6 +30,13 @@ class User
     private $name;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=255)
+     */
+    private $email;
+
+    /**
      * @ORM\OneToMany(targetEntity="BlogpostUser", mappedBy="user", cascade={"all"})
      */
     private $blogpostUser;
@@ -79,6 +86,22 @@ class User
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param string $email
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
     }
 }
 
