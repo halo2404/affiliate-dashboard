@@ -3,6 +3,8 @@
 Upload XML report: XML-Datei hochladen
 Toggle navigation: Navigation umschalten
 Statistics: Statistiken
+Tag statistics: Tag-Statistiken
+
 Overview: Übersicht
 Manage: Verwalten
 
@@ -40,6 +42,8 @@ Create Blogpost: Blogbeitrag erstellen
 Tag: Tag
 Tags: Tags
 
+sale chart: Verkaufs-Diagramm
+
 Edit Tag: Tag bearbeiten
 Create Tag: Tag erstellen
 
@@ -53,8 +57,12 @@ Create User: Benutzer erstellen
 
 ###### Statistics
 
-Sales per Month: Verkäufe pro Monat
+Sales per day: Verkäufe pro Tag
+Sales per month: Verkäufe pro Monat
+
+Day: Tag
 Month: Monat
+Year: Jahr
 Euro: Euro
 
 ###### General translations

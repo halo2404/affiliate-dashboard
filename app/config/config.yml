@@ -65,6 +65,7 @@ doctrine:
                 groupconcat: DoctrineExtensions\Query\Mysql\GroupConcat
                 year: DoctrineExtensions\Query\Mysql\Year
                 month: DoctrineExtensions\Query\Mysql\Month
+                day: DoctrineExtensions\Query\Mysql\Day
 
 # Swiftmailer Configuration
 swiftmailer:
