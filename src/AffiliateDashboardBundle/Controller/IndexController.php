@@ -24,6 +24,7 @@ class IndexController extends Controller
      * Sales per month overview
      *
      * @Route("/", name="index_index")
+     * @Route("/{_locale}/", name="index_index_locale")
      * @Method("GET")
      */
     public function indexAction()

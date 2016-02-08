@@ -30,6 +30,7 @@ class ChartController extends Controller
     public function overviewAction()
     {
         $em = $this->getDoctrine()->getManager();
+        $translator = $this->get('translator');
 
         $sales = $em->getRepository('AffiliateDashboardBundle:Sale')->getSalesPerMonth();
 
@@ -43,11 +44,11 @@ class ChartController extends Controller
         $ob->chart->type('line');
         $ob->chart->renderTo('chart');
 
-        $ob->title->text('Sales per Month');
+        $ob->title->text($translator->trans('Sales per Month'));
 
         $ob->xAxis->categories(array_keys($sales));
-        $ob->xAxis->title(array('text' => 'Month'));
-        $ob->yAxis->title(array('text' => 'Euro'));
+        $ob->xAxis->title(array('text' => $translator->trans('Month')));
+        $ob->yAxis->title(array('text' => $translator->trans('Euro')));
 
         $ob->series($series);
 
