@@ -1,16 +1,16 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Blogpost creation</h1>
+    <h1>{% trans %}Create Blogpost{% endtrans %}</h1>
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
-        <input type="submit" value="Create" />
+        <input type="submit" value="{% trans %}create{% endtrans %}" />
     {{ form_end(form) }}
 
     <ul>
         <li>
-            <a href="{{ path('blogpost_index') }}">Back to the list</a>
+            <a href="{{ path('blogpost_index') }}">{% trans %}back to the list{% endtrans %}</a>
         </li>
     </ul>
 {% endblock %}

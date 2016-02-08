@@ -1,44 +1,44 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Sale</h1>
+    <h1>{% trans %}Sale{% endtrans %}</h1>
 
     <table class="table table-hover table-condensed">
         <tbody>
             <tr>
-                <th>Asin</th>
+                <th>{% trans %}Asin{% endtrans %}</th>
                 <td>{{ sale.asin }}</td>
             </tr>
             <tr>
-                <th>Category</th>
+                <th>{% trans %}Category{% endtrans %}</th>
                 <td>{{ sale.category }}</td>
             </tr>
             <tr>
-                <th>Date</th>
+                <th>{% trans %}Date{% endtrans %}</th>
                 <td>{% if sale.date %}{{ sale.date|localizeddate('medium', 'none') }}{% endif %}</td>
             </tr>
             <tr>
-                <th>Rate</th>
+                <th>{% trans %}Rate{% endtrans %}</th>
                 <td>{{ sale.rate|localizednumber }}%</td>
             </tr>
             <tr>
-                <th>Qty</th>
+                <th>{% trans %}Qty{% endtrans %}</th>
                 <td>{{ sale.qty|localizednumber }}</td>
             </tr>
             <tr>
-                <th>Revenue</th>
+                <th>{% trans %}Revenue{% endtrans %}</th>
                 <td>{{ sale.revenue|localizedcurrency('EUR') }}</td>
             </tr>
             <tr>
-                <th>Earnings</th>
+                <th>{% trans %}Earnings{% endtrans %}</th>
                 <td>{{ sale.earnings|localizedcurrency('EUR') }}</td>
             </tr>
             <tr>
-                <th>Tag</th>
+                <th>{% trans %}Tag{% endtrans %}</th>
                 <td>{{ sale.affiliateTag.name }}</td>
             </tr>
             <tr>
-                <th>Title</th>
+                <th>{% trans %}Title{% endtrans %}</th>
                 <td>{{ sale.title }}</td>
             </tr>
         </tbody>
@@ -46,7 +46,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('sale_index') }}">Back to the list</a>
+            <a href="{{ path('sale_index') }}">{% trans %}back to the list{% endtrans %}</a>
         </li>
     </ul>
 {% endblock %}

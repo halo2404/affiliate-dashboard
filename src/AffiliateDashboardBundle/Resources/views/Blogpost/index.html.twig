@@ -1,17 +1,17 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Blogpost list</h1>
+    <h1>{% trans %}Blogposts{% endtrans %}</h1>
 
     <table class="table table-hover table-condensed">
         <thead>
             <tr>
-                <th>Title</th>
-                <th>Published at</th>
-                <th>Tag</th>
-                <th>Sales</th>
-                <th>Users</th>
-                <th>Actions</th>
+                <th>{% trans %}Title{% endtrans %}</th>
+                <th>{% trans %}Published at{% endtrans %}</th>
+                <th>{% trans %}Tag{% endtrans %}</th>
+                <th>{% trans %}Sales{% endtrans %}</th>
+                <th>{% trans %}Users{% endtrans %}</th>
+                <th>{% trans %}Actions{% endtrans %}</th>
             </tr>
         </thead>
         <tbody>
@@ -21,8 +21,8 @@
                 <td>{% if blogpost.publishedAt %}{{ blogpost.publishedAt|localizeddate('medium', 'none') }}{% endif %}</td>
                 <td>{{ blogpost.affiliateTag }}</td>
                 <td>
-                    <span class="label label-default">{{ blogpost.affiliateTag.sales|length }} sales</span>
-                    <span class="label label-success">{{ blogpost.affiliateTag.sales|propertySum('earnings')|localizedcurrency('EUR') }} earned</span>
+                    <span class="label label-default">{{ blogpost.affiliateTag.sales|length }} {% trans %}Sales{% endtrans %}</span>
+                    <span class="label label-success">{{ blogpost.affiliateTag.sales|propertySum('earnings')|localizedcurrency('EUR') }} {% trans %}earned{% endtrans %}</span>
                 </td>
                 <td>
                     {% for bu in blogpost.blogpostUser %}
@@ -30,9 +30,9 @@
                     {% endfor %}
                 </td>
                 <td>
-                    <a type="button" class="btn btn-default" href="{{ blogpost.url }}">open blogpost</a>
-                    <a type="button" class="btn btn-primary" href="{{ path('blogpost_show', { 'id': blogpost.id }) }}">show</a>
-                    <a type="button" class="btn btn-info" href="{{ path('blogpost_edit', { 'id': blogpost.id }) }}">edit</a>
+                    <a type="button" class="btn btn-default" href="{{ blogpost.url }}">{% trans %}open blogpost{% endtrans %}</a>
+                    <a type="button" class="btn btn-primary" href="{{ path('blogpost_show', { 'id': blogpost.id }) }}">{% trans %}show{% endtrans %}</a>
+                    <a type="button" class="btn btn-info" href="{{ path('blogpost_edit', { 'id': blogpost.id }) }}">{% trans %}edit{% endtrans %}</a>
                 </td>
             </tr>
         {% endfor %}

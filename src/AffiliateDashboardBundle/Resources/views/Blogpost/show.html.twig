@@ -1,24 +1,24 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Blogpost</h1>
+    <h1>{% trans %}Blogpost{% endtrans %}</h1>
 
     <table class="table table-hover table-condensed">
         <tbody>
             <tr>
-                <th>Title</th>
+                <th>{% trans %}Title{% endtrans %}</th>
                 <td>{{ blogpost.title }}</td>
             </tr>
             <tr>
-                <th>Publishedat</th>
+                <th>{% trans %}Published at{% endtrans %}</th>
                 <td>{% if blogpost.publishedAt %}{{ blogpost.publishedAt|localizeddate('medium', 'none') }}{% endif %}</td>
             </tr>
             <tr>
-                <th>Url</th>
+                <th>{% trans %}Url{% endtrans %}</th>
                 <td>{{ blogpost.url }}</td>
             </tr>
             <tr>
-                <th>Tag</th>
+                <th>{% trans %}Tag{% endtrans %}</th>
                 <td>{{ blogpost.affiliateTag.name }}</td>
             </tr>
         </tbody>
@@ -26,14 +26,14 @@
 
     <ul>
         <li>
-            <a href="{{ path('blogpost_index') }}">Back to the list</a>
+            <a href="{{ path('blogpost_index') }}">{% trans %}back to the list{% endtrans %}</a>
         </li>
         <li>
-            <a href="{{ path('blogpost_edit', { 'id': blogpost.id }) }}">Edit</a>
+            <a href="{{ path('blogpost_edit', { 'id': blogpost.id }) }}">{% trans %}edit{% endtrans %}</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input type="submit" value="{% trans %}delete{% endtrans %}">
             {{ form_end(delete_form) }}
         </li>
     </ul>
