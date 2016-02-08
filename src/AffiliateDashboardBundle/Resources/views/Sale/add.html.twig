@@ -1,16 +1,13 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="row">
-        <div class="col-md-12">
-            <div class="page-header">
-                <h1>{% trans %}Upload new sale XML file{% endtrans %}</h1>
-            </div>
-            <div class="well">
-                {{ form_start(form) }}
-                {{ form_widget(form) }}
-                {{ form_end(form) }}
-            </div>
-        </div>
+    <div class="page-header">
+        <h1>{% trans %}Upload new sale XML file{% endtrans %}</h1>
+    </div>
+
+    <div class="well">
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
     </div>
 {% endblock %}

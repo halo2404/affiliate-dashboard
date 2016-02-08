@@ -1,7 +1,10 @@
 ###### Index
 
 Upload XML report: XML-Datei hochladen
-
+Toggle navigation: Navigation umschalten
+Statistics: Statistiken
+Overview: Übersicht
+Manage: Verwalten
 
 ###### Sales
 
@@ -23,13 +26,8 @@ Earnings: Einnahmen
 Blogpost: Blogbeitrag
 Blogposts: Blog-Beiträge
 
-Title: Titel
 Category: Kategorie
 Published at: Veröffentlicht am
-Tag: Tag
-Sales: Verkäufe
-Users: Benutzer
-Actions: Aktionen
 Url: Url
 
 earned: eingenommen
@@ -39,17 +37,27 @@ Create Blogpost: Blogbeitrag erstellen
 
 ###### Tags
 
+Tag: Tag
 Tags: Tags
-
-Name: Name
-
 
 Edit Tag: Tag bearbeiten
 Create Tag: Tag erstellen
 
+###### Users
+
+User: Benutzer
+Users: Benutzer
+
+Edit User: Benutzer bearbeiten
+Create User: Benutzer erstellen
+
 ###### General translations
 
 Affiliate-Dashboard: Affiliate-Dashboard
+Actions: Aktionen
+
+Title: Titel
+Name: Name
 
 create: erstellen
 show: anzeigen

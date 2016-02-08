@@ -2,4 +2,8 @@
 
 {% block body %}
     <div class="alert alert-success" role="alert">{% trans %}Added successfully{% endtrans %}</div>
+
+    <p>
+        <a type="button" class="btn btn-default btn-xs" href="{{ path('sale_index') }}">{% trans %}back to the list{% endtrans %}</a>
+    </p>
 {% endblock %}

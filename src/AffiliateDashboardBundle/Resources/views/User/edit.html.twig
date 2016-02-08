@@ -1,20 +1,23 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>User edit</h1>
+    <div class="page-header">
+        <h1>{% trans %}Edit User{% endtrans %}</h1>
+    </div>
 
     {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
+        <input type="submit" value="{% trans %}edit{% endtrans %}" />
     {{ form_end(edit_form) }}
+
+    <p>
+        <a type="button" class="btn btn-default btn-xs" href="{{ path('user_index') }}">{% trans %}back to the list{% endtrans %}</a>
+    </p>
 
     <ul>
         <li>
-            <a href="{{ path('user_index') }}">Back to the list</a>
-        </li>
-        <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input type="submit" value="{% trans %}delete{% endtrans %}">
             {{ form_end(delete_form) }}
         </li>
     </ul>

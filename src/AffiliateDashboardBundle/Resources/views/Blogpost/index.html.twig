@@ -1,7 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>{% trans %}Blogposts{% endtrans %}</h1>
+    <div class="page-header">
+        <h1>{% trans %}Blogposts{% endtrans %}</h1>
+    </div>
 
     <table class="table table-hover table-condensed">
         <thead>
@@ -30,9 +32,9 @@
                     {% endfor %}
                 </td>
                 <td>
-                    <a type="button" class="btn btn-default" href="{{ blogpost.url }}">{% trans %}open blogpost{% endtrans %}</a>
-                    <a type="button" class="btn btn-primary" href="{{ path('blogpost_show', { 'id': blogpost.id }) }}">{% trans %}show{% endtrans %}</a>
-                    <a type="button" class="btn btn-info" href="{{ path('blogpost_edit', { 'id': blogpost.id }) }}">{% trans %}edit{% endtrans %}</a>
+                    <a type="button" class="btn btn-default btn-sm" href="{{ blogpost.url }}">{% trans %}open blogpost{% endtrans %}</a>
+                    <a type="button" class="btn btn-primary btn-sm" href="{{ path('blogpost_show', { 'id': blogpost.id }) }}">{% trans %}show{% endtrans %}</a>
+                    <a type="button" class="btn btn-info btn-sm" href="{{ path('blogpost_edit', { 'id': blogpost.id }) }}">{% trans %}edit{% endtrans %}</a>
                 </td>
             </tr>
         {% endfor %}

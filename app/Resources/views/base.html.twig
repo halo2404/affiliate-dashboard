@@ -18,39 +18,39 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
+                    <span class="sr-only">{% trans %}Toggle navigation{% endtrans %}</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Affiliate-Dashboard</a>
+                <a class="navbar-brand" href="#">{% trans %}Affiliate-Dashboard{% endtrans %}</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ path('sale_add') }}">Upload XML</a></li>
-                    <li><a href="{{ path('sale_index') }}">List Sales</a></li>
+                    <li><a href="{{ path('sale_add') }}">{% trans %}Upload XML report{% endtrans %}</a></li>
+                    <li><a href="{{ path('sale_index') }}">{% trans %}Sales{% endtrans %}</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Statistics <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans %}Statistics{% endtrans %} <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{ path('chart_overview') }}">Overview</a></li>
+                            <li><a href="{{ path('chart_overview') }}">{% trans %}Overview{% endtrans %}</a></li>
                             <li><a href="#">Another action</a></li>
                         </ul>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manage <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans %}Manage{% endtrans %} <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{ path('user_index') }}">Users</a></li>
-                            <li><a href="{{ path('user_new') }}">Create User</a></li>
+                            <li><a href="{{ path('user_index') }}">{% trans %}Users{% endtrans %}</a></li>
+                            <li><a href="{{ path('user_new') }}">{% trans %}Create User{% endtrans %}</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="{{ path('blogpost_index') }}">Blogposts</a></li>
-                            <li><a href="{{ path('blogpost_new') }}">Create Blogpost</a></li>
+                            <li><a href="{{ path('blogpost_index') }}">{% trans %}Blogposts{% endtrans %}</a></li>
+                            <li><a href="{{ path('blogpost_new') }}">{% trans %}Create Blogpost{% endtrans %}</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="{{ path('tag_index') }}">Tags</a></li>
-                            <li><a href="{{ path('tag_new') }}">Create Tag</a></li>
+                            <li><a href="{{ path('tag_index') }}">{% trans %}Tags{% endtrans %}</a></li>
+                            <li><a href="{{ path('tag_new') }}">{% trans %}Create Tag{% endtrans %}</a></li>
                         </ul>
                     </li>
                 </ul>
