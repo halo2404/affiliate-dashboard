@@ -69,48 +69,6 @@ class Blogpost
         return $this->getTitle();
     }
 
-    public function getUsers()
-    {
-        $users = new ArrayCollection();
-
-        /** @var $bu BlogpostUser */
-        foreach ($this->getBlogpostUser() as $bu) {
-            $users[] = $bu->getUser();
-        }
-
-        return $users;
-    }
-
-    public function setUsers($users)
-    {
-        /** @var $user User */
-        foreach ($users as $user) {
-            $bu = new BlogpostUser();
-
-            $bu->setBlogpost($this);
-            $bu->setUser($user);
-
-            $this->addBlogpostUser($bu);
-        }
-    }
-
-    public function getBlogpost()
-    {
-        return $this;
-    }
-
-    public function addBlogpostUser(BlogpostUser $blogpostUser)
-    {
-        $this->blogpostUser[] = $blogpostUser;
-
-        return $this;
-    }
-
-    public function removeBlogpostUser(BlogpostUser $blogpostUser)
-    {
-        return $this->blogpostUser->removeElement($blogpostUser);
-    }
-
     /**
      * Get id
      *
@@ -219,5 +177,13 @@ class Blogpost
     public function getBlogpostUser()
     {
         return $this->blogpostUser;
+    }
+
+    /**
+     * @param mixed $blogpostUser
+     */
+    public function setBlogpostUser($blogpostUser)
+    {
+        $this->blogpostUser = $blogpostUser;
     }
 }

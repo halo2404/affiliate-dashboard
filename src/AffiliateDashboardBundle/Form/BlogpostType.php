@@ -6,6 +6,7 @@ use AffiliateDashboardBundle\Entity\Tag;
 use AffiliateDashboardBundle\Entity\User;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -28,17 +29,15 @@ class BlogpostType extends AbstractType
                 array(
                     'class' => Tag::class,
                     'choice_label' => 'name',
-                    'placeholder' => 'Choose a sale tag',
+                    'placeholder' => 'Choose a sale tag'
                 )
             )
             ->add(
-                'users',
-                EntityType::class,
+                'BlogpostUser',
+                CollectionType::class,
                 array(
-                    'class' => User::class,
-                    'choice_label' => 'name',
-                    'expanded' => true,
-                    'multiple' => true
+                    'entry_type' => BlogpostUserType::class,
+                    'allow_add' => true
                 )
             )
         ;

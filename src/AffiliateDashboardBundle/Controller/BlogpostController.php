@@ -88,18 +88,9 @@ class BlogpostController extends Controller
         $deleteForm = $this->createDeleteForm($blogpost);
         $editForm = $this->createForm('AffiliateDashboardBundle\Form\BlogpostType', $blogpost);
 
-        $previousCollections = $blogpost->getBlogpostUser();
-        $previousCollections = $previousCollections->toArray();
-
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
-
-            foreach($previousCollections as $bu) {
-                $blogpost->removeBlogpostUser($bu);
-                $em->remove($bu);
-                $em->flush();
-            }
 
             $em->persist($blogpost);
             $em->flush();
