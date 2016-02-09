@@ -5,7 +5,7 @@ services:
             entityManager: "@doctrine.orm.entity_manager"
 
     affiliate_dashboard.twig.propertysum:
-        class: AffiliateDashboardBundle\Service\PropertySum
+        class: AffiliateDashboardBundle\Service\TwigExtension
         public: false
         tags:
             - { name: twig.extension }

@@ -5,12 +5,15 @@
         <h1>{% trans %}Create User{% endtrans %}</h1>
     </div>
 
-    {{ form_start(form) }}
+    {{ form_start(form, { 'style': 'horizontal' }) }}
         {{ form_widget(form) }}
-        <input type="submit" value="{% trans %}create{% endtrans %}" />
+
+        <p>
+            <input type="submit" value="{% trans %}create{% endtrans %}" class="btn btn-primary" />
+        </p>
     {{ form_end(form) }}
 
     <p>
-        <a type="button" class="btn btn-default btn-xs" href="{{ path('user_index') }}">{% trans %}back to the list{% endtrans %}</a>
+        <a class="btn btn-default btn-xs" href="{{ path('user_index') }}">{% trans %}back to the list{% endtrans %}</a>
     </p>
 {% endblock %}

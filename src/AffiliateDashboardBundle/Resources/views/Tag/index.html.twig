@@ -22,8 +22,8 @@
                     <span class="label label-success">{{ tag.sales|propertySum('earnings')|localizedcurrency('EUR') }} {% trans %}earned{% endtrans %}</span>
                 </td>
                 <td>
-                    <a type="button" class="btn btn-default btn-sm" href="{{ path('chart_tag', { 'id': tag.id }) }}">{% trans %}sale chart{% endtrans %}</a>
-                    <a type="button" class="btn btn-info btn-sm" href="{{ path('tag_edit', { 'id': tag.id }) }}">{% trans %}edit{% endtrans %}</a>
+                    <a class="btn btn-default btn-sm" href="{{ path('chart_tag', { 'id': tag.id }) }}">{% trans %}sale chart{% endtrans %}</a>
+                    <a class="btn btn-info btn-sm" href="{{ path('tag_edit', { 'id': tag.id }) }}">{% trans %}edit{% endtrans %}</a>
                 </td>
             </tr>
         {% endfor %}

@@ -45,6 +45,7 @@ class BlogpostController extends Controller
     {
         $blogpost = new Blogpost();
         $form = $this->createForm('AffiliateDashboardBundle\Form\BlogpostType', $blogpost);
+        $form->remove('blogpostUser');
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {

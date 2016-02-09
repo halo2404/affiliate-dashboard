@@ -31,7 +31,7 @@
                 <td>{{ sale.affiliateTag.name }}</td>
                 <td>{{ sale.title }}</td>
                 <td>
-                    <a type="button" class="btn btn-primary btn-sm" href="{{ path('sale_show', { 'id': sale.id }) }}">{% trans %}show{% endtrans %}</a>
+                    <a class="btn btn-primary btn-sm" href="{{ path('sale_show', { 'id': sale.id }) }}">{% trans %}show{% endtrans %}</a>
                 </td>
             </tr>
         {% endfor %}

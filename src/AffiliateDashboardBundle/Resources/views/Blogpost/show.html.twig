@@ -27,17 +27,16 @@
     </table>
 
     <p>
-        <a type="button" class="btn btn-default btn-xs" href="{{ path('blogpost_index') }}">{% trans %}back to the list{% endtrans %}</a>
+        <a href="{{ path('blogpost_edit', { 'id': blogpost.id }) }}" class="btn btn-primary">{% trans %}edit{% endtrans %}</a>
     </p>
 
-    <ul>
-        <li>
-            <a href="{{ path('blogpost_edit', { 'id': blogpost.id }) }}">{% trans %}edit{% endtrans %}</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="{% trans %}delete{% endtrans %}">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+    <p>
+        {{ form_start(delete_form) }}
+        <input type="submit" value="{% trans %}delete{% endtrans %}" class="btn btn-danger">
+        {{ form_end(delete_form) }}
+    </p>
+
+    <p>
+        <a type="button" class="btn btn-default btn-xs" href="{{ path('blogpost_index') }}">{% trans %}back to the list{% endtrans %}</a>
+    </p>
 {% endblock %}

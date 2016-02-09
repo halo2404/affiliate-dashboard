@@ -74,7 +74,9 @@ Actions: Aktionen
 
 Title: Titel
 Name: Name
+Email: Email
 
+save: speichern
 create: erstellen
 show: anzeigen
 edit: bearbeiten

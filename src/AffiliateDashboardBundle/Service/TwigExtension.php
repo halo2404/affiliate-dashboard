@@ -2,7 +2,7 @@
 
 namespace AffiliateDashboardBundle\Service;
 
-class PropertySum extends \Twig_Extension
+class TwigExtension extends \Twig_Extension
 {
     public function getFilters()
     {
@@ -27,6 +27,6 @@ class PropertySum extends \Twig_Extension
 
     public function getName()
     {
-        return 'property_sum';
+        return 'affiliate_dashboard';
     }
 }

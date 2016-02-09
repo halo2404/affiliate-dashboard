@@ -9,6 +9,7 @@
         <thead>
             <tr>
                 <th>{% trans %}Name{% endtrans %}</th>
+                <th>{% trans %}Email{% endtrans %}</th>
                 <th>{% trans %}Actions{% endtrans %}</th>
             </tr>
         </thead>
@@ -16,8 +17,9 @@
         {% for user in users %}
             <tr>
                 <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
                 <td>
-                    <a type="button" class="btn btn-info btn-sm" href="{{ path('user_edit', { 'id': user.id }) }}">{% trans %}edit{% endtrans %}</a>
+                    <a class="btn btn-info btn-sm" href="{{ path('user_edit', { 'id': user.id }) }}">{% trans %}edit{% endtrans %}</a>
                 </td>
             </tr>
         {% endfor %}

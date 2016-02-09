@@ -32,9 +32,9 @@
                     {% endfor %}
                 </td>
                 <td>
-                    <a type="button" class="btn btn-default btn-sm" href="{{ blogpost.url }}">{% trans %}open blogpost{% endtrans %}</a>
-                    <a type="button" class="btn btn-primary btn-sm" href="{{ path('blogpost_show', { 'id': blogpost.id }) }}">{% trans %}show{% endtrans %}</a>
-                    <a type="button" class="btn btn-info btn-sm" href="{{ path('blogpost_edit', { 'id': blogpost.id }) }}">{% trans %}edit{% endtrans %}</a>
+                    <a class="btn btn-default btn-sm" href="{{ blogpost.url }}">{% trans %}open blogpost{% endtrans %}</a>
+                    <a class="btn btn-primary btn-sm" href="{{ path('blogpost_show', { 'id': blogpost.id }) }}">{% trans %}show{% endtrans %}</a>
+                    <a class="btn btn-info btn-sm" href="{{ path('blogpost_edit', { 'id': blogpost.id }) }}">{% trans %}edit{% endtrans %}</a>
                 </td>
             </tr>
         {% endfor %}

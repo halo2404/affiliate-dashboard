@@ -7,10 +7,13 @@
 
     {{ form_start(edit_form, { 'style': 'horizontal' }) }}
         {{ form_widget(edit_form) }}
-        <input type="submit" value="{% trans %}edit{% endtrans %}" />
+
+        <p>
+            <input type="submit" value="{% trans %}save{% endtrans %}" class="btn btn-primary" />
+        </p>
     {{ form_end(edit_form) }}
 
     <p>
-        <a type="button" class="btn btn-default btn-xs" href="{{ path('tag_index') }}">{% trans %}back to the list{% endtrans %}</a>
+        <a class="btn btn-default btn-xs" href="{{ path('tag_index') }}">{% trans %}back to the list{% endtrans %}</a>
     </p>
 {% endblock %}

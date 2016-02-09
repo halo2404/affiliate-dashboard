@@ -7,18 +7,20 @@
 
     {{ form_start(edit_form, { 'style': 'horizontal' }) }}
         {{ form_widget(edit_form) }}
-        <input type="submit" value="{% trans %}edit{% endtrans %}" />
+
+        <p>
+            <input type="submit" value="{% trans %}save{% endtrans %}" class="btn btn-primary" />
+        </p>
+
     {{ form_end(edit_form) }}
 
     <p>
-        <a type="button" class="btn btn-default btn-xs" href="{{ path('user_index') }}">{% trans %}back to the list{% endtrans %}</a>
+        {{ form_start(delete_form) }}
+            <input type="submit" value="{% trans %}delete{% endtrans %}" class="btn btn-danger" />
+        {{ form_end(delete_form) }}
     </p>
 
-    <ul>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="{% trans %}delete{% endtrans %}">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+    <p>
+        <a class="btn btn-default btn-xs" href="{{ path('user_index') }}">{% trans %}back to the list{% endtrans %}</a>
+    </p>
 {% endblock %}

@@ -33,7 +33,7 @@
         </div>
 
         <p>
-            <input type="submit" value="{% trans %}edit{% endtrans %}" class="btn btn-primary" />
+            <input type="submit" value="{% trans %}save{% endtrans %}" class="btn btn-primary" />
         </p>
     {{ form_end(edit_form) }}
 
@@ -44,7 +44,7 @@
     </p>
 
     <p>
-        <a type="button" class="btn btn-default btn-xs" href="{{ path('blogpost_index') }}">{% trans %}back to the list{% endtrans %}</a>
+        <a class="btn btn-default btn-xs" href="{{ path('blogpost_index') }}">{% trans %}back to the list{% endtrans %}</a>
     </p>
 {% endblock %}
 
