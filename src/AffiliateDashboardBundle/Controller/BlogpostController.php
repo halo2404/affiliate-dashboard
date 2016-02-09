@@ -2,6 +2,8 @@
 
 namespace AffiliateDashboardBundle\Controller;
 
+use AffiliateDashboardBundle\Entity\BlogpostUser;
+use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -86,11 +88,24 @@ class BlogpostController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $deleteForm = $this->createDeleteForm($blogpost);
-        $editForm = $this->createForm('AffiliateDashboardBundle\Form\BlogpostType', $blogpost);
 
+        // Backup existing relations
+        $originalBlogpostUser = new ArrayCollection();
+        foreach ($blogpost->getBlogpostUser() as $bu) {
+            $originalBlogpostUser->add($bu);
+        }
+
+        $editForm = $this->createForm('AffiliateDashboardBundle\Form\BlogpostType', $blogpost);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
+
+            /** @var $bu BlogpostUser */
+            foreach ($originalBlogpostUser as $bu) {
+                if (false === $blogpost->getBlogpostUser()->contains($bu)) {
+                    $em->remove($bu);
+                }
+            }
 
             $em->persist($blogpost);
             $em->flush();

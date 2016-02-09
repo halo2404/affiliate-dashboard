@@ -186,4 +186,27 @@ class Blogpost
     {
         $this->blogpostUser = $blogpostUser;
     }
+
+    /**
+     * @param BlogpostUser $bu
+     * @return Blogpost
+     */
+    public function addBlogpostUser(BlogpostUser $bu)
+    {
+        if (!$this->blogpostUser->contains($bu)) {
+            $bu->setBlogpost($this);
+            $this->blogpostUser->add($bu);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param BlogpostUser $bu
+     * @return bool
+     */
+    public function removeBlogpostUser(BlogpostUser $bu)
+    {
+        return $this->blogpostUser->removeElement($bu);
+    }
 }

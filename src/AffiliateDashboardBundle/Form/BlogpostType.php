@@ -33,11 +33,13 @@ class BlogpostType extends AbstractType
                 )
             )
             ->add(
-                'BlogpostUser',
+                'blogpostUser',
                 CollectionType::class,
                 array(
                     'entry_type' => BlogpostUserType::class,
-                    'allow_add' => true
+                    'allow_add' => true,
+                    'allow_delete' => true,
+                    'by_reference' => false
                 )
             )
         ;

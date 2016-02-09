@@ -6,7 +6,20 @@
     </div>
 
     {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
+        {{ form_row(edit_form.title) }}
+        {{ form_row(edit_form.publishedAt) }}
+        {{ form_row(edit_form.url) }}
+        {{ form_row(edit_form.affiliateTag) }}
+
+        <ul class="blogpost-user" data-prototype="{{ form_widget(edit_form.blogpostUser.vars.prototype)|e }}">
+        {% for bu in edit_form.blogpostUser %}
+            <li>
+                {{ form_row(bu.user) }}
+                {{ form_row(bu.percentage) }}
+            </li>
+        {% endfor %}
+        </ul>
+
         <input type="submit" value="{% trans %}edit{% endtrans %}" />
     {{ form_end(edit_form) }}
 
@@ -21,4 +34,55 @@
             {{ form_end(delete_form) }}
         </li>
     </ul>
+{% endblock %}
+
+{% block javascripts %}
+
+    <script type="text/javascript">
+
+        var collectionHolder;
+
+        var addLink = $('<a href="#">{% trans %}Add a user{% endtrans %}</a>');
+        var newLinkLi = $('<li></li>').append(addLink);
+
+        jQuery(document).ready(function() {
+
+            function addTagFormDeleteLink(buFormLi) {
+                var removeFormA = $('<a href="#">delete this tag</a>');
+                buFormLi.append(removeFormA);
+
+                removeFormA.on('click', function(e) {
+                    buFormLi.remove();
+                    e.preventDefault();
+                });
+            }
+
+            collectionHolder = $('ul.blogpost-user');
+            collectionHolder.append(newLinkLi);
+            collectionHolder.data('index', collectionHolder.find(':input').length);
+
+            collectionHolder.find('li').each(function() {
+                addTagFormDeleteLink($(this));
+            });
+
+            addLink.on('click', function(e) {
+
+                var prototype = collectionHolder.data('prototype');
+                var index = collectionHolder.data('index');
+
+                // Replace '__name__' in the prototype's HTML to
+                // instead be a number based on how many items we have
+                var newForm = prototype.replace(/__name__/g, index);
+                collectionHolder.data('index', index + 1);
+
+                var newFormLi = $('<li></li>').append(newForm);
+                addTagFormDeleteLink(newFormLi);
+                newLinkLi.before(newFormLi);
+
+                e.preventDefault();
+            });
+        });
+
+    </script>
+
 {% endblock %}
