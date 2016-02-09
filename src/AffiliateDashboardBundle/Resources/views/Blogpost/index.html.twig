@@ -12,19 +12,23 @@
                 <th>{% trans %}Published at{% endtrans %}</th>
                 <th>{% trans %}Tag{% endtrans %}</th>
                 <th>{% trans %}Sales{% endtrans %}</th>
+                <th>{% trans %}Assigned{% endtrans %}</th>
                 <th>{% trans %}Users{% endtrans %}</th>
                 <th>{% trans %}Actions{% endtrans %}</th>
             </tr>
         </thead>
         <tbody>
         {% for blogpost in blogposts %}
-            <tr>
+            <tr {% if (blogpost.blogpostUser|propertySum('percentage') != 100) %}class="danger"{% endif %}>
                 <td>{{ blogpost.title }}</td>
                 <td>{% if blogpost.publishedAt %}{{ blogpost.publishedAt|localizeddate('medium', 'none') }}{% endif %}</td>
                 <td>{{ blogpost.affiliateTag }}</td>
                 <td>
                     <span class="label label-default">{{ blogpost.affiliateTag.sales|length }} {% trans %}Sales{% endtrans %}</span>
                     <span class="label label-success">{{ blogpost.affiliateTag.sales|propertySum('earnings')|localizedcurrency('EUR') }} {% trans %}earned{% endtrans %}</span>
+                </td>
+                <td>
+                    {{ blogpost.blogpostUser|propertySum('percentage') }}%
                 </td>
                 <td>
                     {% for bu in blogpost.blogpostUser %}
