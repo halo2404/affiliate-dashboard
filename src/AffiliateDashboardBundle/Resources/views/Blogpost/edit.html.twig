@@ -5,35 +5,47 @@
         <h1>{% trans %}Edit Blogpost{% endtrans %}</h1>
     </div>
 
-    {{ form_start(edit_form) }}
+    {{ form_start(edit_form, { 'style': 'horizontal' }) }}
+        {{ form_errors(edit_form) }}
+
         {{ form_row(edit_form.title) }}
         {{ form_row(edit_form.publishedAt) }}
         {{ form_row(edit_form.url) }}
         {{ form_row(edit_form.affiliateTag) }}
 
-        <ul class="blogpost-user" data-prototype="{{ form_widget(edit_form.blogpostUser.vars.prototype)|e }}">
-        {% for bu in edit_form.blogpostUser %}
-            <li>
-                {{ form_row(bu.user) }}
-                {{ form_row(bu.percentage) }}
-            </li>
-        {% endfor %}
-        </ul>
+        <div class="form-group">
+            <label class="control-label col-lg-2">{% trans %}Users{% endtrans %}</label>
+            <div class="col-lg-10 blogpost-users" data-prototype-user="{{ form_widget(edit_form.blogpostUser.vars.prototype.user)|e }}" data-prototype-percentage="{{ form_widget(edit_form.blogpostUser.vars.prototype.percentage)|e }}">
+                {% for bu in edit_form.blogpostUser %}
+                    <div class="row form-group blogpost-user">
+                        <div class="col-lg-6">
+                            {{ form_widget(bu.user) }}
+                        </div>
+                        <div class="col-lg-4">
+                            {{ form_widget(bu.percentage) }}
+                        </div>
+                        <div class="col-lg-2 delete-button">
+                            <!-- Delete button will be placed with javascript -->
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
 
-        <input type="submit" value="{% trans %}edit{% endtrans %}" />
+        <p>
+            <input type="submit" value="{% trans %}edit{% endtrans %}" class="btn btn-primary" />
+        </p>
     {{ form_end(edit_form) }}
+
+    <p>
+        {{ form_start(delete_form) }}
+        <input type="submit" value="{% trans %}delete{% endtrans %}" class="btn btn-danger">
+        {{ form_end(delete_form) }}
+    </p>
 
     <p>
         <a type="button" class="btn btn-default btn-xs" href="{{ path('blogpost_index') }}">{% trans %}back to the list{% endtrans %}</a>
     </p>
-
-    <ul>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="{% trans %}delete{% endtrans %}">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
 {% endblock %}
 
 {% block javascripts %}
@@ -42,42 +54,48 @@
 
         var collectionHolder;
 
-        var addLink = $('<a href="#">{% trans %}Add a user{% endtrans %}</a>');
-        var newLinkLi = $('<li></li>').append(addLink);
+        var newUserLink = $('<a href="#" class="btn btn-success">{% trans %}Add a user{% endtrans %}</a>');
 
         jQuery(document).ready(function() {
 
-            function addTagFormDeleteLink(buFormLi) {
-                var removeFormA = $('<a href="#">delete this tag</a>');
-                buFormLi.append(removeFormA);
+            collectionHolder = $('.blogpost-users');
+            collectionHolder.append(newUserLink);
+            collectionHolder.data('index', collectionHolder.find('.blogpost-user').length);
+
+            function addFormDeleteLink(buFormGroup) {
+                var removeFormA = $('<a href="#" class="btn btn-danger">{% trans %}Delete user{% endtrans %}</a>');
+                buFormGroup.find('.delete-button').append(removeFormA);
 
                 removeFormA.on('click', function(e) {
-                    buFormLi.remove();
+                    buFormGroup.remove();
                     e.preventDefault();
                 });
             }
 
-            collectionHolder = $('ul.blogpost-user');
-            collectionHolder.append(newLinkLi);
-            collectionHolder.data('index', collectionHolder.find(':input').length);
-
-            collectionHolder.find('li').each(function() {
-                addTagFormDeleteLink($(this));
+            collectionHolder.find('.blogpost-user').each(function() {
+                addFormDeleteLink($(this));
             });
 
-            addLink.on('click', function(e) {
-
-                var prototype = collectionHolder.data('prototype');
+            newUserLink.on('click', function(e) {
                 var index = collectionHolder.data('index');
 
-                // Replace '__name__' in the prototype's HTML to
-                // instead be a number based on how many items we have
-                var newForm = prototype.replace(/__name__/g, index);
+                // Replace '__name__' in the prototype's HTML to index
+                var prototypeUser = $('<div class="col-lg-6"></div>').append(
+                    collectionHolder.data('prototype-user').replace(/__name__/g, index)
+                );
+                var prototypePercentage = $('<div class="col-lg-4"></div>').append(
+                    collectionHolder.data('prototype-percentage').replace(/__name__/g, index)
+                );
+
                 collectionHolder.data('index', index + 1);
 
-                var newFormLi = $('<li></li>').append(newForm);
-                addTagFormDeleteLink(newFormLi);
-                newLinkLi.before(newFormLi);
+                var newForm = $('<div class="row form-group blogpost-user">')
+                    .append(prototypeUser)
+                    .append(prototypePercentage)
+                    .append($('<div class="col-lg-2 delete-button"></div>'));
+
+                addFormDeleteLink(newForm);
+                newUserLink.before(newForm);
 
                 e.preventDefault();
             });
