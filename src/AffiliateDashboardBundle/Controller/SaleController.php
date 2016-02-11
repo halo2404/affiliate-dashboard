@@ -79,16 +79,23 @@ class SaleController extends Controller
      * @Route("/", name="sale_index")
      * @Method("GET")
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
         $sales = $em->getRepository('AffiliateDashboardBundle:Sale')->findAll();
 
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $sales, /* query NOT result */
+            $request->query->getInt('page', 1) /*page number*/,
+            50 /*limit per page*/
+        );
+
         return $this->render(
             'AffiliateDashboardBundle:Sale:index.html.twig',
             array(
-                'sales' => $sales,
+                'pagination' => $pagination,
             )
         );
     }

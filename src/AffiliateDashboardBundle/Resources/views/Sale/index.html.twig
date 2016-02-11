@@ -2,7 +2,7 @@
 
 {% block body %}
     <div class="page-header">
-        <h1>{% trans %}Sales{% endtrans %}</h1>
+        <h1>{{ pagination.getTotalItemCount }} {% trans %}Sales{% endtrans %}</h1>
     </div>
 
     <table class="table table-hover table-condensed">
@@ -20,9 +20,9 @@
             </tr>
         </thead>
         <tbody>
-        {% for sale in sales %}
+        {% for sale in pagination %}
             <tr class="{% if (sale.earnings > 0) %}success{% else %}danger{% endif %}">
-                <td>{{ sale.asin }}</td>
+                <td><a href="http://www.amazon.de/gp/product/{{ sale.asin }}" target="_blank">{{ sale.asin }}</a></td>
                 <td>{% if sale.date %}{{ sale.date|localizeddate('medium', 'none') }}{% endif %}</td>
                 <td>{{ sale.rate|localizednumber }}%</td>
                 <td>{{ sale.qty|localizednumber }}</td>
@@ -37,4 +37,8 @@
         {% endfor %}
         </tbody>
     </table>
+
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+    </div>
 {% endblock %}
