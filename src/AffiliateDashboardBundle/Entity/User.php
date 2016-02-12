@@ -103,5 +103,13 @@ class User
     {
         $this->email = $email;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getBlogpostUser()
+    {
+        return $this->blogpostUser;
+    }
 }
 

@@ -20,7 +20,7 @@
         <tbody>
         {% for blogpost in blogposts %}
             <tr {% if (blogpost.blogpostUser|propertySum('percentage') != 100) %}class="danger"{% endif %}>
-                <td>{{ blogpost.title }}</td>
+                <td><a href="{{ blogpost.url }}">{{ blogpost.title }}</a></td>
                 <td>{% if blogpost.publishedAt %}{{ blogpost.publishedAt|localizeddate('medium', 'none') }}{% endif %}</td>
                 <td>{{ blogpost.affiliateTag }}</td>
                 <td>
@@ -36,7 +36,6 @@
                     {% endfor %}
                 </td>
                 <td>
-                    <a class="btn btn-default btn-sm" href="{{ blogpost.url }}">{% trans %}open blogpost{% endtrans %}</a>
                     <a class="btn btn-primary btn-sm" href="{{ path('blogpost_show', { 'id': blogpost.id }) }}">{% trans %}show{% endtrans %}</a>
                     <a class="btn btn-info btn-sm" href="{{ path('blogpost_edit', { 'id': blogpost.id }) }}">{% trans %}edit{% endtrans %}</a>
                 </td>

@@ -10,6 +10,7 @@
             <tr>
                 <th>{% trans %}Name{% endtrans %}</th>
                 <th>{% trans %}Email{% endtrans %}</th>
+                <th>{% trans %}Sales{% endtrans %}</th>
                 <th>{% trans %}Actions{% endtrans %}</th>
             </tr>
         </thead>
@@ -18,6 +19,16 @@
             <tr>
                 <td>{{ user.name }}</td>
                 <td>{{ user.email }}</td>
+                <td>
+                    <span class="label label-default">{{ user.blogpostUser|length }} {% trans %}Blogposts{% endtrans %}</span>
+                    {% set sum = 0 %}
+                    {% for bu in user.blogpostUser %}
+                        {% set sum = sum + (bu.blogpost.affiliateTag.sales|propertySum('earnings') / 100 * bu.percentage) %}
+                    {% endfor %}
+                    {% if sum > 0 %}
+                    <span class="label label-success">{{ sum|localizedcurrency('EUR') }} {% trans %}earned{% endtrans %}</span>
+                    {% endif %}
+                </td>
                 <td>
                     <a class="btn btn-info btn-sm" href="{{ path('user_edit', { 'id': user.id }) }}">{% trans %}edit{% endtrans %}</a>
                 </td>
