@@ -172,7 +172,7 @@ class Blogpost
     }
 
     /**
-     * @return mixed
+     * @return BlogpostUser[]
      */
     public function getBlogpostUser()
     {

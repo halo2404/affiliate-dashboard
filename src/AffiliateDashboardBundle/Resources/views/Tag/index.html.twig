@@ -9,6 +9,7 @@
         <thead>
             <tr>
                 <th>{% trans %}Name{% endtrans %}</th>
+                <th>{% trans %}Blogposts{% endtrans %}</th>
                 <th>{% trans %}Sales{% endtrans %}</th>
                 <th>{% trans %}Actions{% endtrans %}</th>
             </tr>
@@ -18,8 +19,19 @@
             <tr>
                 <td>{{ tag.name }}</td>
                 <td>
-                    <span class="label label-default">{{ tag.sales|length }} {% trans %}Sales{% endtrans %}</span>
-                    <span class="label label-success">{{ tag.sales|propertySum('earnings')|localizedcurrency('EUR') }} {% trans %}earned{% endtrans %}</span>
+                    {% if tag.blogposts|length > 0 %}
+                        <span class="label label-default">{{ tag.blogposts|length }} {% trans %}Blogposts{% endtrans %}</span>
+                    {% else %}
+                        <span class="label label-warning">{% trans %}No Blogposts{% endtrans %}</span>
+                    {% endif %}
+                </td>
+                <td>
+                    {% if tag.sales|length > 0 %}
+                        <span class="label label-default">{{ tag.sales|length }} {% trans %}Sales{% endtrans %}</span><br/>
+                        <span class="label {% if tag.earnings > 0 %}label-success{% else %}label-danger{% endif %}">{{ tag.earnings|localizedcurrency('EUR') }} {% trans %}earned{% endtrans %}</span>
+                    {% else %}
+                        <span class="label label-warning">{% trans %}No Sales{% endtrans %}</span>
+                    {% endif %}
                 </td>
                 <td>
                     <a class="btn btn-default btn-sm" href="{{ path('chart_tag', { 'id': tag.id }) }}">{% trans %}sale chart{% endtrans %}</a>

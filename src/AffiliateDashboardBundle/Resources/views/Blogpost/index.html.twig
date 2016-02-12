@@ -24,8 +24,8 @@
                 <td>{% if blogpost.publishedAt %}{{ blogpost.publishedAt|localizeddate('medium', 'none') }}{% endif %}</td>
                 <td>{{ blogpost.affiliateTag }}</td>
                 <td>
-                    <span class="label label-default">{{ blogpost.affiliateTag.sales|length }} {% trans %}Sales{% endtrans %}</span>
-                    <span class="label label-success">{{ blogpost.affiliateTag.sales|propertySum('earnings')|localizedcurrency('EUR') }} {% trans %}earned{% endtrans %}</span>
+                    <span class="label label-default">{{ blogpost.affiliateTag.sales|length }} {% trans %}Sales{% endtrans %}</span><br/>
+                    <span class="label label-success">{{ blogpost.affiliateTag.earnings|localizedcurrency('EUR') }} {% trans %}earned{% endtrans %}</span>
                 </td>
                 <td>
                     {{ blogpost.blogpostUser|propertySum('percentage') }}%

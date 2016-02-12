@@ -105,11 +105,26 @@ class User
     }
 
     /**
-     * @return mixed
+     * @return BlogpostUser[]
      */
     public function getBlogpostUser()
     {
         return $this->blogpostUser;
+    }
+
+    /**
+     * @return float
+     */
+    public function getEarnings()
+    {
+        $sum = 0;
+
+        foreach ($this->getBlogpostUser() as $bu) {
+            $tag = $bu->getBlogpost()->getAffiliateTag();
+            $sum += $tag->getEarnings() / count($tag->getBlogposts()) / 100 * $bu->getPercentage();
+        }
+
+        return $sum;
     }
 }
 

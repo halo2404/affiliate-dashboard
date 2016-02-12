@@ -92,7 +92,7 @@ class Tag
     }
 
     /**
-     * @return mixed
+     * @return Blogpost[]
      */
     public function getBlogposts()
     {
@@ -100,7 +100,7 @@ class Tag
     }
 
     /**
-     * @param mixed $blogposts
+     * @param Blogpost[] $blogposts
      */
     public function setBlogposts($blogposts)
     {
@@ -108,7 +108,7 @@ class Tag
     }
 
     /**
-     * @return mixed
+     * @return Sale[]
      */
     public function getSales()
     {
@@ -116,11 +116,25 @@ class Tag
     }
 
     /**
-     * @param mixed $sales
+     * @param Sale[] $sales
      */
     public function setSales($sales)
     {
         $this->sales = $sales;
+    }
+
+    /**
+     * @return float
+     */
+    public function getEarnings()
+    {
+        $sum = 0;
+
+        foreach ($this->getSales() as $sale) {
+            $sum += $sale->getEarnings();
+        }
+
+        return $sum;
     }
 }
 
