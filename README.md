@@ -20,6 +20,18 @@ Install the current version
 php composer.phar install
 ```
 
+Copy app/config/parameters.yml.dist to app/config/parameters.yml and fill required fields (like database connection)
+
+Create the database schema
+
+```
+php bin/console doctrine:schema:create
+```
+
+Upload report.xml files from Amazon Partnernet
+
+Start adding users and blogposts by using the ui and assign blogposts to tags and users
+
 ## Technologies
 
 - Symfony 3 (MIT license)
