@@ -1,4 +1,9 @@
 services:
+    affiliate_dashboard.orm.aggregation:
+          class: AffiliateDashboardBundle\Service\Aggregation
+          arguments:
+              entityManager: "@doctrine.orm.entity_manager"
+
     affiliate_dashboard.xml.importservice:
         class: AffiliateDashboardBundle\Service\Xmlfile
         arguments:

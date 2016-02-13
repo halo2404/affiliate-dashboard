@@ -43,6 +43,13 @@ class Tag
      */
     private $sales;
 
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="aggregated_earnings", type="float")
+     */
+    private $aggregatedEarnings = 0;
+
     function __construct()
     {
         $this->blogposts = new ArrayCollection();
@@ -108,6 +115,17 @@ class Tag
     }
 
     /**
+     * @param Sale $sale
+     * @return Tag
+     */
+    public function addSale(Sale $sale)
+    {
+        $this->sales->add($sale);
+
+        return $this;
+    }
+
+    /**
      * @return Sale[]
      */
     public function getSales()
@@ -126,15 +144,36 @@ class Tag
     /**
      * @return float
      */
-    public function getEarnings()
+    public function getAggregatedEarnings()
     {
-        $sum = 0;
+        return $this->aggregatedEarnings;
+    }
 
-        foreach ($this->getSales() as $sale) {
-            $sum += $sale->getEarnings();
+    /**
+     * @param float $aggregatedEarnings
+     */
+    public function setAggregatedEarnings($aggregatedEarnings)
+    {
+        $this->aggregatedEarnings = $aggregatedEarnings;
+    }
+
+    /**
+     * @param bool $useOrm
+     * @return float
+     */
+    public function getEarnings($useOrm = false)
+    {
+        if ($useOrm) {
+            $sum = 0;
+
+            foreach ($this->getSales() as $sale) {
+                $sum += $sale->getEarnings();
+            }
+
+            return $sum;
         }
-
-        return $sum;
+        else {
+            return $this->getAggregatedEarnings();
+        }
     }
 }
-

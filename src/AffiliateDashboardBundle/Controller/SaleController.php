@@ -2,6 +2,7 @@
 
 namespace AffiliateDashboardBundle\Controller;
 
+use AffiliateDashboardBundle\Service\Aggregation;
 use AffiliateDashboardBundle\Service\Xmlfile;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -24,7 +25,12 @@ class SaleController extends Controller
      */
     public function addAction(Request $request)
     {
+        /** @var $xmlFile Xmlfile */
         $xmlFile = $this->container->get('affiliate_dashboard.xml.importservice');
+
+        /** @var $ormAggregator Aggregation */
+        $ormAggregator = $this->container->get('affiliate_dashboard.orm.aggregation');
+
         $form = $this->createForm(UploadType::class, $xmlFile);
 
         $form->handleRequest($request);
@@ -45,9 +51,8 @@ class SaleController extends Controller
 
             $em = $this->getDoctrine()->getManager();
 
-            foreach ($xmlFile->crawl($savedFile) as $sale) {
-                $em->persist($sale);
-            }
+            $tags = $xmlFile->crawlAndPersist($savedFile);
+            $ormAggregator->reAggregateTags($tags);
 
             $em->flush();
 

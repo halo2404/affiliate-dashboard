@@ -4,6 +4,7 @@ namespace AffiliateDashboardBundle\Service;
 
 use AffiliateDashboardBundle\Entity\Sale;
 use AffiliateDashboardBundle\Entity\Tag;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\EntityManager;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\DomCrawler\Crawler;
@@ -35,11 +36,11 @@ class Xmlfile
 
     /**
      * @param File $file
-     * @return Sale[]
+     * @return Tag[]
      */
-    public function crawl(File $file)
+    public function crawlAndPersist(File $file)
     {
-        $sales = [];
+        $tags = new ArrayCollection();
 
         $crawler = new Crawler(file_get_contents($file->getPathname()));
 
@@ -70,10 +71,13 @@ class Xmlfile
             $saleObj->setSeller($saleItem->getAttribute('Seller') ?: null);
             $saleObj->setTitle($saleItem->getAttribute('Title'));
 
-            $sales[] = $saleObj;
+            $this->getEm()->persist($saleObj);
+
+            $tagEntity->addSale($saleObj);
+            $tags->add($tagEntity);
         }
 
-        return $sales;
+        return $tags;
     }
 
     private function parseFloat($value)
