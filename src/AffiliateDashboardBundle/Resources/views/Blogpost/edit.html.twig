@@ -87,15 +87,23 @@
                     collectionHolder.data('prototype-percentage').replace(/__name__/g, index)
                 );
 
-                collectionHolder.data('index', index + 1);
+                // Remove already used users
+                $('select[id^=blogpost_blogpostUser]').each(function() {
+                    var selected = $(this).val();
+                    prototypeUser.find('option[value=' + selected + ']').remove();
+                });
 
-                var newForm = $('<div class="row form-group blogpost-user">')
-                    .append(prototypeUser)
-                    .append(prototypePercentage)
-                    .append($('<div class="col-lg-2 delete-button"></div>'));
+                if (prototypeUser.find('option').length > 0) {
+                    collectionHolder.data('index', index + 1);
 
-                addFormDeleteLink(newForm);
-                newUserLink.before(newForm);
+                    var newForm = $('<div class="row form-group blogpost-user">')
+                        .append(prototypeUser)
+                        .append(prototypePercentage)
+                        .append($('<div class="col-lg-2 delete-button"></div>'));
+
+                    addFormDeleteLink(newForm);
+                    newUserLink.before(newForm);
+                }
 
                 e.preventDefault();
             });
