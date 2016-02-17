@@ -8,6 +8,10 @@
     <table class="table table-hover table-condensed">
         <tbody>
             <tr>
+                <th>{% trans %}Title{% endtrans %}</th>
+                <td>{{ sale.title|e }}</td>
+            </tr>
+            <tr>
                 <th>{% trans %}Asin{% endtrans %}</th>
                 <td>{{ sale.asin }}</td>
             </tr>
@@ -21,7 +25,7 @@
             </tr>
             <tr>
                 <th>{% trans %}Rate{% endtrans %}</th>
-                <td>{{ sale.rate|localizednumber }}%</td>
+                <td>{{ sale.rate|round|localizednumber }}%</td>
             </tr>
             <tr>
                 <th>{% trans %}Qty{% endtrans %}</th>
@@ -38,10 +42,6 @@
             <tr>
                 <th>{% trans %}Tag{% endtrans %}</th>
                 <td>{{ sale.affiliateTag.name }}</td>
-            </tr>
-            <tr>
-                <th>{% trans %}Title{% endtrans %}</th>
-                <td>{{ sale.title }}</td>
             </tr>
         </tbody>
     </table>
