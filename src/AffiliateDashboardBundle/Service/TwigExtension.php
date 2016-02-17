@@ -9,6 +9,7 @@ class TwigExtension extends \Twig_Extension
         return array(
             new \Twig_SimpleFilter('propertySum', array($this, 'propertySum')),
             new \Twig_SimpleFilter('propertySumIf', array($this, 'propertySumIf')),
+            new \Twig_SimpleFilter('isValidUrl', array($this, 'isValidUrl')),
         );
     }
 
@@ -40,6 +41,11 @@ class TwigExtension extends \Twig_Extension
         }
 
         return $sum;
+    }
+
+    public function isValidUrl($string)
+    {
+        return strpos($string, 'http') === 0;
     }
 
     public function getName()
