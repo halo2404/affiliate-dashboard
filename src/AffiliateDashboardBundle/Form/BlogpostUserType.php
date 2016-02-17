@@ -3,6 +3,7 @@
 namespace AffiliateDashboardBundle\Form;
 
 use AffiliateDashboardBundle\Entity\User;
+use Doctrine\ORM\EntityRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
@@ -23,7 +24,11 @@ class BlogpostUserType extends AbstractType
                 EntityType::class,
                 array(
                     'class' => User::class,
-                    'choice_label' => 'name'
+                    'choice_label' => 'name',
+                    'query_builder' => function (EntityRepository $er) {
+                        return $er->createQueryBuilder('u')
+                            ->orderBy('u.name', 'ASC');
+                    }
                 )
             )
             ->add('percentage', NumberType::class)
