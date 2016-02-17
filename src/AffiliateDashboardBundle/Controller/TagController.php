@@ -26,7 +26,7 @@ class TagController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $tags = $em->getRepository('AffiliateDashboardBundle:Tag')->findAll();
+        $tags = $em->getRepository('AffiliateDashboardBundle:Tag')->findAllOrderBySaleCount();
 
         return $this->render('AffiliateDashboardBundle:Tag:index.html.twig', array(
             'tags' => $tags,

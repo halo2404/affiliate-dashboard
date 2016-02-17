@@ -14,4 +14,15 @@ class TagRepository extends \Doctrine\ORM\EntityRepository
     {
         return $this->findOneByName($name);
     }
+
+    public function findAllOrderBySaleCount()
+    {
+        return $this->createQueryBuilder('t')
+            ->addSelect('COUNT(s) AS HIDDEN salesCount')
+            ->leftJoin('t.sales', 's')
+            ->groupBy('t')
+            ->orderBy('salesCount', 'DESC')
+            ->getQuery()
+            ->getResult();
+    }
 }
