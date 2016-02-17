@@ -3,6 +3,7 @@
 namespace AffiliateDashboardBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\ORM\Event\LifecycleEventArgs;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -176,7 +177,17 @@ class Blogpost
      */
     public function getBlogpostUser()
     {
-        return $this->blogpostUser;
+        $bu = $this->blogpostUser;
+
+        // Sort users by name
+        $iterator = $bu->getIterator();
+        $iterator->uasort(function ($a, $b) {
+            /** @var $a BlogpostUser */
+            /** @var $b BlogpostUser */
+            return ($a->getUser()->getName() < $b->getUser()->getName()) ? -1 : 1;
+        });
+
+        return new ArrayCollection(iterator_to_array($iterator));
     }
 
     /**

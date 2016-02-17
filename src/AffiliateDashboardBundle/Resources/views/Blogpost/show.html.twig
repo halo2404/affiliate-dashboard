@@ -23,6 +23,14 @@
                 <th>{% trans %}Tag{% endtrans %}</th>
                 <td>{{ blogpost.affiliateTag.name }}</td>
             </tr>
+            <tr>
+                <th>{% trans %}Users{% endtrans %}</th>
+                <td>
+                    {% for bu in blogpost.blogpostUser %}
+                        <span class="label label-default">{{ bu.user.name }} - {{ bu.percentage }}%</span>
+                    {% endfor %}
+                </td>
+            </tr>
         </tbody>
     </table>
 
