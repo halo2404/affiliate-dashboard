@@ -4,6 +4,12 @@ services:
           arguments:
               entityManager: "@doctrine.orm.entity_manager"
 
+    affiliate_dashboard.orm.sale_hash:
+          class: AffiliateDashboardBundle\Service\EventListener\SaleHash
+          public: false
+          tags:
+              - { name: doctrine.event_listener, event: prePersist }
+
     affiliate_dashboard.xml.importservice:
         class: AffiliateDashboardBundle\Service\Xmlfile
         arguments:

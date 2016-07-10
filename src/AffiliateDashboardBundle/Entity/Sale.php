@@ -95,7 +95,7 @@ class Sale
     /**
      * @var string
      *
-     * @ORM\Column(name="title", type="text")
+     * @ORM\Column(name="title", type="string", length=255)
      */
     private $title;
 
@@ -105,6 +105,13 @@ class Sale
      * @ORM\Column(name="seller", type="string", length=255, nullable=true)
      */
     private $seller;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="hash", type="string", length=32, unique=true)
+     */
+    private $hash;
 
     /**
      * @var boolean
@@ -164,7 +171,7 @@ class Sale
      */
     public function setCategory($category)
     {
-        $this->category = $category;
+        $this->category = $category ?: null;
 
         return $this;
     }
@@ -376,7 +383,7 @@ class Sale
      */
     public function setTitle($title)
     {
-        $this->title = $title;
+        $this->title = substr($title, 0, 255);
 
         return $this;
     }
@@ -413,6 +420,22 @@ class Sale
     public function getSeller()
     {
         return $this->seller;
+    }
+
+    /**
+     * @return string
+     */
+    public function getHash()
+    {
+        return $this->hash;
+    }
+
+    /**
+     * @param string $hash
+     */
+    public function setHash($hash)
+    {
+        $this->hash = $hash;
     }
 
     /**
