@@ -15,7 +15,8 @@
             </tr>
         </thead>
         <tbody>
-        {% for tag in tags %}
+        {% for item in tags %}
+            {% set tag = item.0 %}
             <tr>
                 <td>{{ tag.name }}</td>
                 <td>
@@ -26,8 +27,8 @@
                     {% endif %}
                 </td>
                 <td>
-                    {% if tag.sales|length > 0 %}
-                        <span class="label label-default">{{ tag.sales|length }} {% trans %}Sales{% endtrans %}</span><br/>
+                    {% if item.salesCount > 0 %}
+                        <span class="label label-default">{{ item.salesCount }} {% trans %}Sales{% endtrans %}</span><br/>
                         <span class="label {% if tag.earnings > 0 %}label-success{% else %}label-danger{% endif %}">{{ tag.earnings|localizedcurrency('EUR') }} {% trans %}earned{% endtrans %}</span>
                     {% else %}
                         <span class="label label-warning">{% trans %}No Sales{% endtrans %}</span>

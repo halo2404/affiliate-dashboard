@@ -18,8 +18,8 @@ class TagRepository extends \Doctrine\ORM\EntityRepository
     public function findAllOrderBySaleCount()
     {
         return $this->createQueryBuilder('t')
-            ->addSelect('COUNT(s) AS HIDDEN salesCount')
             ->leftJoin('t.sales', 's')
+            ->addSelect('COUNT(s) AS salesCount')
             ->groupBy('t')
             ->orderBy('salesCount', 'DESC')
             ->getQuery()
