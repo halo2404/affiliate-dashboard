@@ -28,9 +28,12 @@ class UserController extends Controller
 
         $users = $em->getRepository('AffiliateDashboardBundle:User')->findAll();
 
-        return $this->render('AffiliateDashboardBundle:User:index.html.twig', array(
-            'users' => $users,
-        ));
+        return $this->render(
+            'AffiliateDashboardBundle:User:index.html.twig',
+            array(
+                'users' => $users,
+            )
+        );
     }
 
     /**
@@ -53,10 +56,13 @@ class UserController extends Controller
             return $this->redirectToRoute('user_index');
         }
 
-        return $this->render('AffiliateDashboardBundle:User:new.html.twig', array(
-            'user' => $user,
-            'form' => $form->createView(),
-        ));
+        return $this->render(
+            'AffiliateDashboardBundle:User:new.html.twig',
+            array(
+                'user' => $user,
+                'form' => $form->createView(),
+            )
+        );
     }
 
     /**
@@ -79,11 +85,14 @@ class UserController extends Controller
             return $this->redirectToRoute('user_index');
         }
 
-        return $this->render('AffiliateDashboardBundle:User:edit.html.twig', array(
-            'user' => $user,
-            'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
-        ));
+        return $this->render(
+            'AffiliateDashboardBundle:User:edit.html.twig',
+            array(
+                'user' => $user,
+                'edit_form' => $editForm->createView(),
+                'delete_form' => $deleteForm->createView(),
+            )
+        );
     }
 
     /**

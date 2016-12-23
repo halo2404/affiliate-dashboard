@@ -31,6 +31,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{{ path('sale_add') }}">{% trans %}Upload XML report{% endtrans %}</a></li>
                     <li><a href="{{ path('sale_index') }}">{% trans %}Sales{% endtrans %}</a></li>
+                    <li><a href="{{ path('payment_clear') }}">{% trans %}Clear Payments{% endtrans %}</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans %}Statistics{% endtrans %} <span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -50,6 +51,8 @@
                             <li role="separator" class="divider"></li>
                             <li><a href="{{ path('tag_index') }}">{% trans %}Tags{% endtrans %}</a></li>
                             <li><a href="{{ path('tag_new') }}">{% trans %}Create Tag{% endtrans %}</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="{{ path('payment_index') }}">{% trans %}Payments{% endtrans %}</a></li>
                         </ul>
                     </li>
                 </ul>

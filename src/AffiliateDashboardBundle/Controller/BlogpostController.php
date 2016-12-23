@@ -30,9 +30,12 @@ class BlogpostController extends Controller
 
         $blogposts = $em->getRepository('AffiliateDashboardBundle:Blogpost')->findAll();
 
-        return $this->render('AffiliateDashboardBundle:Blogpost:index.html.twig', array(
-            'blogposts' => $blogposts,
-        ));
+        return $this->render(
+            'AffiliateDashboardBundle:Blogpost:index.html.twig',
+            array(
+                'blogposts' => $blogposts,
+            )
+        );
     }
 
     /**
@@ -56,10 +59,13 @@ class BlogpostController extends Controller
             return $this->redirectToRoute('blogpost_show', array('id' => $blogpost->getId()));
         }
 
-        return $this->render('AffiliateDashboardBundle:Blogpost:new.html.twig', array(
-            'blogpost' => $blogpost,
-            'form' => $form->createView(),
-        ));
+        return $this->render(
+            'AffiliateDashboardBundle:Blogpost:new.html.twig',
+            array(
+                'blogpost' => $blogpost,
+                'form' => $form->createView(),
+            )
+        );
     }
 
     /**
@@ -72,10 +78,13 @@ class BlogpostController extends Controller
     {
         $deleteForm = $this->createDeleteForm($blogpost);
 
-        return $this->render('AffiliateDashboardBundle:Blogpost:show.html.twig', array(
-            'blogpost' => $blogpost,
-            'delete_form' => $deleteForm->createView(),
-        ));
+        return $this->render(
+            'AffiliateDashboardBundle:Blogpost:show.html.twig',
+            array(
+                'blogpost' => $blogpost,
+                'delete_form' => $deleteForm->createView(),
+            )
+        );
     }
 
     /**
@@ -114,11 +123,14 @@ class BlogpostController extends Controller
             return $this->redirectToRoute('blogpost_edit', array('id' => $blogpost->getId()));
         }
 
-        return $this->render('AffiliateDashboardBundle:Blogpost:edit.html.twig', array(
-            'blogpost' => $blogpost,
-            'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
-        ));
+        return $this->render(
+            'AffiliateDashboardBundle:Blogpost:edit.html.twig',
+            array(
+                'blogpost' => $blogpost,
+                'edit_form' => $editForm->createView(),
+                'delete_form' => $deleteForm->createView(),
+            )
+        );
     }
 
     /**

@@ -34,7 +34,7 @@
                     <span class="label label-success">{{ blogpost.affiliateTag.earnings|localizedcurrency('EUR') }} {% trans %}earned{% endtrans %}</span>
                 </td>
                 <td>
-                    {{ blogpost.blogpostUser|propertySum('percentage') }}%
+                    <span class="label {% if blogpost.blogpostUser|propertySum('percentage') == 100 %}label-success{% else %}label-warning{% endif %}">{{ blogpost.blogpostUser|propertySum('percentage') }}%</span>
                 </td>
                 <td>
                     {% for bu in blogpost.blogpostUser %}

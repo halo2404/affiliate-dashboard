@@ -28,9 +28,12 @@ class TagController extends Controller
 
         $tags = $em->getRepository('AffiliateDashboardBundle:Tag')->findAllOrderBySaleCount();
 
-        return $this->render('AffiliateDashboardBundle:Tag:index.html.twig', array(
-            'tags' => $tags,
-        ));
+        return $this->render(
+            'AffiliateDashboardBundle:Tag:index.html.twig',
+            array(
+                'tags' => $tags,
+            )
+        );
     }
 
     /**
@@ -53,10 +56,13 @@ class TagController extends Controller
             return $this->redirectToRoute('tag_index');
         }
 
-        return $this->render('AffiliateDashboardBundle:Tag:new.html.twig', array(
-            'tag' => $tag,
-            'form' => $form->createView(),
-        ));
+        return $this->render(
+            'AffiliateDashboardBundle:Tag:new.html.twig',
+            array(
+                'tag' => $tag,
+                'form' => $form->createView(),
+            )
+        );
     }
 
     /**
@@ -78,10 +84,13 @@ class TagController extends Controller
             return $this->redirectToRoute('tag_index');
         }
 
-        return $this->render('AffiliateDashboardBundle:Tag:edit.html.twig', array(
-            'tag' => $tag,
-            'edit_form' => $editForm->createView()
-        ));
+        return $this->render(
+            'AffiliateDashboardBundle:Tag:edit.html.twig',
+            array(
+                'tag' => $tag,
+                'edit_form' => $editForm->createView()
+            )
+        );
     }
 
 }

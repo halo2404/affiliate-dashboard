@@ -55,7 +55,9 @@ class ChartController extends Controller
 
         return $this->render(
             'AffiliateDashboardBundle:Chart:chart.html.twig',
-            array('chart' => $ob)
+            array(
+                'chart' => $ob
+            )
         );
     }
 
@@ -93,7 +95,9 @@ class ChartController extends Controller
 
         return $this->render(
             'AffiliateDashboardBundle:Chart:chart.html.twig',
-            array('chart' => $ob)
+            array(
+                'chart' => $ob
+            )
         );
     }
 }

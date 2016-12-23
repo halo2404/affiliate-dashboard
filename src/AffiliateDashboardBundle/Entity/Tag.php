@@ -159,15 +159,18 @@ class Tag
 
     /**
      * @param bool $useOrm
+     * @param bool $clearedFilter
      * @return float
      */
-    public function getEarnings($useOrm = false)
+    public function getEarnings($useOrm = false, $clearedFilter = false)
     {
         if ($useOrm) {
             $sum = 0;
 
             foreach ($this->getSales() as $sale) {
-                $sum += $sale->getEarnings();
+                if (!$clearedFilter || !$sale->getCleared()) {
+                    $sum += $sale->getEarnings();
+                }
             }
 
             return $sum;
@@ -175,5 +178,21 @@ class Tag
         else {
             return $this->getAggregatedEarnings();
         }
+    }
+
+    /**
+     * @return float
+     */
+    public function getPaid()
+    {
+        $sum = 0;
+
+        foreach ($this->getSales() as $sale) {
+            if ($sale->getCleared()) {
+                $sum += $sale->getEarnings();
+            }
+        }
+
+        return $sum;
     }
 }

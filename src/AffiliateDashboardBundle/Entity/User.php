@@ -41,9 +41,17 @@ class User
      */
     private $blogpostUser;
 
+    /**
+     * @var ArrayCollection
+     *
+     * @ORM\OneToMany(targetEntity="Payment" , mappedBy="user" , cascade={"all"})
+     */
+    private $payments;
+
     function __construct()
     {
         $this->blogpostUser = new ArrayCollection();
+        $this->payments = new ArrayCollection();
     }
 
     /**
@@ -113,6 +121,33 @@ class User
     }
 
     /**
+     * @param Payment $payment
+     * @return $this
+     */
+    public function addPayment(Payment $payment)
+    {
+        $this->payments->add($payment);
+
+        return $this;
+    }
+
+    /**
+     * @return Payment[]
+     */
+    public function getPayments()
+    {
+        return $this->payments;
+    }
+
+    /**
+     * @param Payment[] $payments
+     */
+    public function setPayments($payments)
+    {
+        $this->payments = $payments;
+    }
+
+    /**
      * @return float
      */
     public function getEarnings()
@@ -122,6 +157,18 @@ class User
         foreach ($this->getBlogpostUser() as $bu) {
             $tag = $bu->getBlogpost()->getAffiliateTag();
             $sum += $tag->getEarnings() / count($tag->getBlogposts()) / 100 * $bu->getPercentage();
+        }
+
+        return $sum;
+    }
+
+    public function getPaid()
+    {
+        $sum = 0;
+
+        foreach ($this->getBlogpostUser() as $bu) {
+            $tag = $bu->getBlogpost()->getAffiliateTag();
+            $sum += $tag->getPaid() / count($tag->getBlogposts()) / 100 * $bu->getPercentage();
         }
 
         return $sum;
