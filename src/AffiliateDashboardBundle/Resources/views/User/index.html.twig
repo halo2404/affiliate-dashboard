@@ -21,8 +21,9 @@
                 <td>{{ user.email }}</td>
                 <td>
                     <span class="label label-default">{{ user.blogpostUser|length }} {% trans %}Blogposts{% endtrans %}</span><br/>
-                    <span class="label label-success">{{ user.earnings|localizedcurrency('EUR') }} {% trans %}earned{% endtrans %}</span>
-                    <span class="label label-success">{{ user.earnings|localizedcurrency('EUR') }} {% trans %}paid{% endtrans %}</span>
+                    <span class="label label-warning">{{ user.earnings|localizedcurrency('EUR') }} {% trans %}earned{% endtrans %}</span><br/>
+                    <span class="label label-success">{{ user.paid|localizedcurrency('EUR') }} {% trans %}paid{% endtrans %}</span><br/>
+                    <span class="label label-danger">{{ (user.earnings - user.paid)|localizedcurrency('EUR') }} {% trans %}open{% endtrans %}</span>
                 </td>
                 <td>
                     <a class="btn btn-info btn-sm" href="{{ path('user_edit', { 'id': user.id }) }}">{% trans %}edit{% endtrans %}</a>

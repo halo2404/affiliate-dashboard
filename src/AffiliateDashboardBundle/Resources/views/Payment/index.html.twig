@@ -11,7 +11,6 @@
                 <th>{% trans %}Date{% endtrans %}</th>
                 <th>{% trans %}Name{% endtrans %}</th>
                 <th>{% trans %}Revenue{% endtrans %}</th>
-                <th>{% trans %}Actions{% endtrans %}</th>
             </tr>
         </thead>
         <tbody>
@@ -20,9 +19,6 @@
                 <td>{{ payment.date|localizeddate('medium', 'none') }}</td>
                 <td>{{ payment.user.name }}</td>
                 <td>{{ payment.amount|localizedcurrency('EUR') }}</td>
-                <td>
-                    <a class="btn btn-info btn-sm" href="{{ path('payment_show', { 'id': payment.id }) }}">{% trans %}show{% endtrans %}</a>
-                </td>
             </tr>
         {% endfor %}
         </tbody>

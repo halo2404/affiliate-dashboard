@@ -44,22 +44,6 @@ class PaymentController extends Controller
     }
 
     /**
-     * Finds and displays a Payment entity.
-     *
-     * @Route("/{id}", name="payment_show")
-     * @Method("GET")
-     */
-    public function showAction(Payment $payment)
-    {
-        return $this->render(
-            'AffiliateDashboardBundle:Payment:show.html.twig',
-            array(
-                'payment' => $payment,
-            )
-        );
-    }
-
-    /**
      * Clear payments
      *
      * @Route("/clear", name="payment_clear")

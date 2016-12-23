@@ -179,20 +179,4 @@ class Tag
             return $this->getAggregatedEarnings();
         }
     }
-
-    /**
-     * @return float
-     */
-    public function getPaid()
-    {
-        $sum = 0;
-
-        foreach ($this->getSales() as $sale) {
-            if ($sale->getCleared()) {
-                $sum += $sale->getEarnings();
-            }
-        }
-
-        return $sum;
-    }
 }

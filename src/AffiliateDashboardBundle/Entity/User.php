@@ -166,9 +166,8 @@ class User
     {
         $sum = 0;
 
-        foreach ($this->getBlogpostUser() as $bu) {
-            $tag = $bu->getBlogpost()->getAffiliateTag();
-            $sum += $tag->getPaid() / count($tag->getBlogposts()) / 100 * $bu->getPercentage();
+        foreach ($this->getPayments() as $payment) {
+            $sum += $payment->getAmount();
         }
 
         return $sum;
